@@ -1,0 +1,28 @@
+{
+  "name": "lostfromthestart.website",
+  "version": "1.0.0",
+  "description": "Lost From The Start is a female-fronted poppunk band from Belgium",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon Server.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tailball/LostFromTheStart.Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tailball/LostFromTheStart.Website/issues"
+  },
+  "homepage": "https://github.com/Tailball/LostFromTheStart.Website#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}
