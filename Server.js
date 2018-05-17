@@ -1,11 +1,11 @@
-const express = require('express');
+const express = require("express");
 const mongoose = require("mongoose");
-const bodyparser = require('body-parser');
+const bodyparser = require("body-parser");
 
-const preorders = require('./Routes/preorders');
+const preorders = require("./api/routes/preorders");
 
 const config = require("./configuration/serverconfig");
-const debuglogger =require('./middleware/debuglogger');
+const debuglogger = require("./middleware/debuglogger");
 
 
 //configure server
@@ -15,14 +15,18 @@ const port = process.env.PORT || 5000;
 if (config.environment === "DEBUG") {
   server.use(debuglogger);
 }
-server.use(bodyparser.json());
-server.use(bodyparser.urlencoded({extended:false}));
 
-//configure mongoDB
-mongoose.connect(config.dbUri, () => console.log(' > Connected to Lost From The Start database.'));
+server.use(bodyparser.json());
+server.use(bodyparser.urlencoded({ extended: false }));
+
 
 //configure server routes
-server.use('/preorders', preorders);
+//server.use('/', undefined); //root -> static website
+server.use("/api/preorders", preorders);
+
+
+//configure mongoDB
+mongoose.connect(config.dbUri, () => console.log(" > Connected to Lost From The Start database."));
 
 
 //start server
