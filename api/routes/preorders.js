@@ -14,16 +14,20 @@ router.post("/all", (req, res) => {
 });
 
 async function postAll(req, res) {
-  const validLogin = await hash.compareCredentials(
-    req.body.username,
-    req.body.password
-  );
+  try {
+    const validLogin = await hash.compareCredentials(
+      req.body.username,
+      req.body.password
+    );
 
-  if (!validLogin) {
-    return res.status(401).json({ message: "Unauthorized" });
-  } else {
-    const orders = await Preorder.find();
-    res.json(orders);
+    if (!validLogin) {
+      return res.status(401).json({ message: "Unauthorized" });
+    } else {
+      const orders = await Preorder.find();
+      return res.json(orders);
+    }
+  } catch (err) {
+    return res.json(err);
   }
 }
 
@@ -83,16 +87,20 @@ router.post("/", (req, res) => {
   savePreorder(req, res, preorder, errors);
 });
 
-async function savePreorder(req, res, preorder, errors){
-  const foundOrder = await Preorder.findOne({ email: preorder.email })
+async function savePreorder(req, res, preorder, errors) {
+  try {
+    const foundOrder = await Preorder.findOne({ email: preorder.email })
 
-  if(foundOrder){
-    errors.email = "A preorder already exists for this email address";
-    return res.json(errors);
+    if (foundOrder) {
+      errors.email = "A preorder already exists for this email address";
+      return res.json(errors);
+    }
+
+    const newOrder = await new Preorder(preorder).save();
+    return res.json(newOrder);
+  } catch (err) {
+    return res.json(err);
   }
-
-  const newOrder = await new Preorder(preorder).save();
-  return res.json(newOrder);
 }
 
 
