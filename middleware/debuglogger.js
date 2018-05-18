@@ -4,4 +4,4 @@ const log = function(req, res, next) {
   next();
 };
 
-module.exports = log;
+module.exports = log; 

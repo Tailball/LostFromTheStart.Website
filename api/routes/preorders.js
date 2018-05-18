@@ -18,18 +18,12 @@ async function postAll(req, res) {
     req.body.username,
     req.body.password
   );
-  console.log(validLogin);
 
   if (!validLogin) {
     return res.status(401).json({ message: "Unauthorized" });
   } else {
-    Preorder.find()
-      .then(orders => {
-        res.json(orders);
-      })
-      .catch(err => {
-        res.status(400).json(err);
-      });
+    const orders = await Preorder.find();
+    res.json(orders);
   }
 }
 

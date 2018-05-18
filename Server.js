@@ -22,6 +22,8 @@ server.use(bodyparser.urlencoded({ extended: false }));
 
 //configure server routes
 //server.use('/', undefined); //root -> static website
+server.use("/", express.static('./client/build'));
+
 server.use("/api/preorders", preorders);
 
 
