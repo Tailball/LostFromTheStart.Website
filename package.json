@@ -4,8 +4,12 @@
   "description": "Lost From The Start is a female-fronted poppunk band from Belgium",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon Server.js --watch",
+    "start": "node Server.js",
+    "startwatch": "nodemon Server.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines":{
+    "node": "8.11.1",
   },
   "repository": {
     "type": "git",
