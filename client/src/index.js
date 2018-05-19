@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
-
-import css from './index.css';
+import css from "./index.css";  //link stylesheet
+import App from './App';        //link master file
 
 
 ReactDOM.render(
