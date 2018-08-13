@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import css from "./index.css";  //link stylesheet
-import App from './App';        //link master file
+import './style/css/index.css';
+import App from './components/App';
 
 
-ReactDOM.render(
-  <App />,
-  document.querySelector('#reactContainer')
-);
+ReactDOM.render(<App />, document.querySelector('#reactContainer'));
 
