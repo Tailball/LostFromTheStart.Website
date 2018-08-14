@@ -7,6 +7,8 @@ const preorders = require("./api/routes/preorders");
 const config = require("./configuration/serverconfig");
 const debuglogger = require("./middleware/debuglogger");
 
+const http = require('http');
+
 
 //configure server
 const server = express();
@@ -33,3 +35,9 @@ mongoose.connect(config.dbUri, () => console.log(" > Connected to Lost From The 
 
 //start server
 server.listen(port, () => console.log(" > Lost From The Start API server running, now listening..."));
+
+const herokuKeepAliveTime = 500000;
+setInterval(() => {
+  console.log('keeping alive...');
+  http.get('http://lostfromthestart.herokuapp.com', () => console.log('http get succesful'));
+}, herokuKeepAliveTime);
