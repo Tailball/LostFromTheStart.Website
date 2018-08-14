@@ -6,7 +6,6 @@ import { faFacebookSquare, faYoutubeSquare, faInstagram } from '@fortawesome/fre
 
 import logo from '../images/logo.png';
 
-
 class App extends React.Component {
   render() {
     return (
@@ -21,9 +20,18 @@ class App extends React.Component {
         </div>
 
         <div id="socialMedia">
-          <FontAwesomeIcon className="icon" icon={faFacebookSquare} />
-          <FontAwesomeIcon className="icon" icon={faYoutubeSquare} />
-          <FontAwesomeIcon className="icon" icon={faInstagram} />
+          <a href="https://www.facebook.com/lostfromthestartband"
+             target="_blank">
+            <FontAwesomeIcon className="icon" icon={faFacebookSquare} />
+          </a>
+          <a href="https://www.youtube.com/watch?v=bA3STgJYs7A"
+             target="_blank">
+            <FontAwesomeIcon className="icon" icon={faYoutubeSquare} />
+          </a>
+          <a href="https://www.instagram.com/lostfromthestartband/"
+             target="_blank">
+            <FontAwesomeIcon className="icon" icon={faInstagram} />
+          </a>
         </div>
       </div>
     );

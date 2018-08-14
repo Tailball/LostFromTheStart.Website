@@ -10,22 +10,44 @@ body {
 }
 
 .mainContainer {
-    margin: 0;
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .7)), url(../../images/background.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
     width: 100vw;
     height: 100vh;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
+    margin: 0;
+    
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .7)), url(../../images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    @media screen and (max-height: 665px) {
+        justify-content: space-evenly;
+    }
+
+    
     #logo {
         width: 70%;
         margin-top: 10vh;
+        
+        @media screen and (max-height: 795px) {
+            width: 60%;
+        }
+        @media screen and (max-height: 665px) {
+            width: 50%;
+            margin-top: 0;
+        }
+
+        @media screen and (max-width: 1000px){
+            width: 85%;
+        }
+        @media screen and (max-width: 505px) {
+            width: 90%;
+        }
     }
 
     #items {
@@ -34,33 +56,70 @@ body {
         color: #EFEFEF;
         text-align: center;
 
+        @media screen and (max-height: 795px) {
+            margin-top: 20vh;
+        }
+        @media screen and (max-height: 665px) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
         h1 {
             font-weight: 100;
             letter-spacing: 2px;
             font-size: 2.5rem;
+
+            @media screen and (max-width: 505px) {
+                font-size: 2rem;
+            }
+            @media screen and (max-width: 425px) {
+                font-size: 1.6rem;
+            }
         }
 
         h2 {
             font-weight: 100;
             font-size: 2rem;
+
+            @media screen and (max-width: 505px) {
+                font-size: 1.75rem;
+            }
+            @media screen and (max-width: 425px) {
+                font-size: 1.3rem;
+            }
         }
     }
 
     #socialMedia {
         display: flex;
         flex-direction: row;
+        width: 100%;
         justify-content: center;
 
-        margin-bottom: 2vh;
-        font-size: 2.8rem;
-        color: #EFEFEF;
+        @media screen and (max-width: 425px) {
+            justify-content: space-evenly;
+        }
 
-        cursor: pointer;
+        a {
+            font-size: 2.8rem;
+            color: #EFEFEF;
 
-        .icon {
-            margin: .5rem;
             margin-left: 2rem;
             margin-right: 2rem;
+            
+            cursor: pointer;
+
+            @media screen and (max-width: 1000px) {
+                margin-left: 3rem;
+                margin-right: 3rem;
+            }
+            @media screen and (max-width: 425px) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            @media screen and (max-width: 380px) {
+                font-size: 2.2rem;
+            }
 
             &:hover {
                 color: #61c0ff;

@@ -8,43 +8,91 @@ body {
   font-size: 62.5%; }
 
 .mainContainer {
-  margin: 0;
-  background: linear-gradient(black, rgba(0, 0, 0, 0.7)), url(../../images/background.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin: 0;
+  background: linear-gradient(black, rgba(0, 0, 0, 0.7)), url(../../images/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
+  @media screen and (max-height: 665px) {
+    .mainContainer {
+      justify-content: space-evenly; } }
   .mainContainer #logo {
     width: 70%;
     margin-top: 10vh; }
+    @media screen and (max-height: 795px) {
+      .mainContainer #logo {
+        width: 60%; } }
+    @media screen and (max-height: 665px) {
+      .mainContainer #logo {
+        width: 50%;
+        margin-top: 0; } }
+    @media screen and (max-width: 1000px) {
+      .mainContainer #logo {
+        width: 85%; } }
+    @media screen and (max-width: 505px) {
+      .mainContainer #logo {
+        width: 90%; } }
   .mainContainer #items {
     margin-top: 25vh;
     margin-bottom: 12.5vh;
     color: #EFEFEF;
     text-align: center; }
+    @media screen and (max-height: 795px) {
+      .mainContainer #items {
+        margin-top: 20vh; } }
+    @media screen and (max-height: 665px) {
+      .mainContainer #items {
+        margin-top: 0;
+        margin-bottom: 0; } }
     .mainContainer #items h1 {
       font-weight: 100;
       letter-spacing: 2px;
       font-size: 2.5rem; }
+      @media screen and (max-width: 505px) {
+        .mainContainer #items h1 {
+          font-size: 2rem; } }
+      @media screen and (max-width: 425px) {
+        .mainContainer #items h1 {
+          font-size: 1.6rem; } }
     .mainContainer #items h2 {
       font-weight: 100;
       font-size: 2rem; }
+      @media screen and (max-width: 505px) {
+        .mainContainer #items h2 {
+          font-size: 1.75rem; } }
+      @media screen and (max-width: 425px) {
+        .mainContainer #items h2 {
+          font-size: 1.3rem; } }
   .mainContainer #socialMedia {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin-bottom: 2vh;
-    font-size: 2.8rem;
-    color: #EFEFEF;
-    cursor: pointer; }
-    .mainContainer #socialMedia .icon {
-      margin: .5rem;
+    width: 100%;
+    justify-content: center; }
+    @media screen and (max-width: 425px) {
+      .mainContainer #socialMedia {
+        justify-content: space-evenly; } }
+    .mainContainer #socialMedia a {
+      font-size: 2.8rem;
+      color: #EFEFEF;
       margin-left: 2rem;
-      margin-right: 2rem; }
-      .mainContainer #socialMedia .icon:hover {
+      margin-right: 2rem;
+      cursor: pointer; }
+      @media screen and (max-width: 1000px) {
+        .mainContainer #socialMedia a {
+          margin-left: 3rem;
+          margin-right: 3rem; } }
+      @media screen and (max-width: 425px) {
+        .mainContainer #socialMedia a {
+          margin-left: 0;
+          margin-right: 0; } }
+      @media screen and (max-width: 380px) {
+        .mainContainer #socialMedia a {
+          font-size: 2.2rem; } }
+      .mainContainer #socialMedia a:hover {
         color: #61c0ff; }
