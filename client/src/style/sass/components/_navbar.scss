@@ -23,7 +23,7 @@
 
         a {
             color: $color-light;
-            font-size: 1.8rem;
+            font-size: 3rem;
             transition: $transition;
 
             &:not(:last-of-type) {
@@ -42,7 +42,7 @@
 
         h1 {
             font-weight: 100;
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             letter-spacing: 1.1px;
         }
     }
@@ -54,7 +54,7 @@
 
         a {
             color: $color-light;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             text-transform: uppercase;
             letter-spacing: 1.1px;
             font-weight: 100;

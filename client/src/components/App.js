@@ -1,5 +1,7 @@
 import React from 'react';
 
+import isMobile from '../util/local';
+
 import Navbar from './Navbar';
 import Shows from './Shows';
 import Footer from './Footer';
@@ -13,7 +15,7 @@ class App extends React.Component {
       <div className="mainContainer">
         <Navbar />
 
-        <section id="hero">
+        <section id="hero" className={isMobile() ? 'bg-mobile' : 'bg-desktop'}>
           <img src={logo} 
                alt="Lost From The Start logo"
                id="logo" />

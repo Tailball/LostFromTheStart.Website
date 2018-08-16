@@ -3,7 +3,6 @@ section#shows {
     background: url('../../images/bg2.jpg');
     background-size: cover;
     background-position: bottom;
-    background-attachment: fixed;
     color: $color-light;
 
     display: flex;
@@ -13,17 +12,17 @@ section#shows {
 
     h1 {
         font-weight: 100;
-        font-size: 2.8rem;
+        font-size: 3.2rem;
         letter-spacing: 1.2px;
         margin: 0;
         margin-top: 2rem;
     }
 
     h2 {
-        font-weight: 300;
-        font-size: 2.2rem;
+        font-weight: 400;
+        font-size: 2rem;
         letter-spacing: 1px;
-        margin-top: 3rem;
+        margin-top: 5rem;
     }
 
     table {
@@ -32,7 +31,6 @@ section#shows {
         background-color: $color-dark-opaque;
 
         &:last-of-type {
-            
             margin-bottom: 10rem;
         }
 
@@ -40,8 +38,8 @@ section#shows {
 
             td {
                 font-weight: 100;
-                font-size: 1.1rem;
-                padding: .3rem 1rem;
+                font-size: 1.6rem;
+                padding: .5rem 1.5rem;
             }
         }
     }

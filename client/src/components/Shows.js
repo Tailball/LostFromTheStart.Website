@@ -1,5 +1,7 @@
 import React from 'react';
 
+import isMobile from '../util/local';
+
 class Shows extends React.Component {
     constructor (props) {
         super(props);
@@ -7,7 +9,7 @@ class Shows extends React.Component {
 
     render () {
         return (
-            <section id="shows">
+            <section id="shows" className={isMobile() ? 'bg-mobile' : 'bg-desktop'}>
                 <h1>Shows &amp; tours</h1>
             
                 <h2>Upcoming</h2>
