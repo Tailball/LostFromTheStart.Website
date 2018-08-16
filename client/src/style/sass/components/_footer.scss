@@ -13,4 +13,17 @@
         font-size: .8rem;
         color: $color-light;
     }
+
+    a {
+        color: $color-light;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(0, 0, 0, 0);
+
+        transition: $transition;
+
+        &:hover {
+            border-bottom: 1px solid $color-light;
+        }
+    }
 }

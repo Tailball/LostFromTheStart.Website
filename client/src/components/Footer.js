@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div id="footer">
-            <p>(c) JP Graphics - 2018 - all rights reserved</p>
+            <p>&copy; <a href="http://jochenpanjaer.be" target="_blank">JP Graphics - 2018</a> - all rights reserved</p>
         </div>
     );
 }
