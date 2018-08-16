@@ -1,38 +1,36 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookSquare, faYoutubeSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
+import Navbar from './Navbar';
+import Shows from './Shows';
+import Footer from './Footer';
 
 import logo from '../images/logo.png';
+import fewandfarbetweenalbum from '../images/album cover.png';
 
 class App extends React.Component {
   render() {
     return (
       <div className="mainContainer">
-        <img src={logo} 
-             alt="Lost From The Start logo"
-             id="logo" />
+        <Navbar />
 
-        <div id="items">
+        <section id="hero">
+          <img src={logo} 
+               alt="Lost From The Start logo"
+               id="logo" />
+        </section>
+
+        <section id="news">
+          <img src={fewandfarbetweenalbum} alt="Few And Far Between album cover" />
           <h1>few and far between</h1>
           <h2>2018.09.29</h2>
-        </div>
+          <p>The first full-length, featuring singles 'Out Of Left Field' and 'Off The Hook'</p>
+          <button>Preorder now</button>
+        </section>
 
-        <div id="socialMedia">
-          <a href="https://www.facebook.com/lostfromthestartband"
-             target="_blank">
-            <FontAwesomeIcon className="icon" icon={faFacebookSquare} />
-          </a>
-          <a href="https://www.youtube.com/watch?v=bA3STgJYs7A"
-             target="_blank">
-            <FontAwesomeIcon className="icon" icon={faYoutubeSquare} />
-          </a>
-          <a href="https://www.instagram.com/lostfromthestartband/"
-             target="_blank">
-            <FontAwesomeIcon className="icon" icon={faInstagram} />
-          </a>
-        </div>
+        <Shows />
+
+        <Footer />
+
       </div>
     );
   }

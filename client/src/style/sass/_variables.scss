@@ -1,0 +1,14 @@
+$color-dark: #1f1f1f;
+$color-light: #c6c6c6;
+
+$color-full-opaque: rgba(0, 0, 0, 0);
+$color-dark-opaque: rgba(31, 31, 31, .8);
+$color-light-opaque: rgba(198, 198, 198, .7);
+
+$color-dark-opaque-lite: rgba(10, 10, 10, .98);
+$color-light-opaque-lite: rgba(198, 198, 198, .9);
+
+
+$transition-speed: .3s;
+$transition-easing: ease-out;
+$transition: all $transition-speed $transition-easing;
