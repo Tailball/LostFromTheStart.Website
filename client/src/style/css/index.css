@@ -15,7 +15,6 @@ body {
   font-family: 'Raleway', sans-serif; }
 
 .mainContainer {
-  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative; }
@@ -31,7 +30,7 @@ body {
   top: 0;
   left: 0;
   height: 8vh;
-  width: 100vw;
+  width: 100%;
   background-color: rgba(31, 31, 31, 0.8);
   color: #c6c6c6;
   display: flex;
@@ -141,12 +140,86 @@ section#news {
       background: #c6c6c6;
       color: #1f1f1f; }
 
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  background-color: rgba(0, 0, 0, 0.75) !important; }
+
+.ReactModal__Content.ReactModal__Content--after-open {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  margin-right: -50% !important;
+  transform: translate(-50%, -50%) !important;
+  border: 2px solid rgba(31, 31, 31, 0.8) !important;
+  background: linear-gradient(to bottom, rgba(31, 31, 31, 0.8), rgba(10, 10, 10, 0.98)), url("../../images/20.jpg") !important;
+  padding: 3.5rem 5rem !important;
+  color: #c6c6c6 !important; }
+  .ReactModal__Content.ReactModal__Content--after-open h1 {
+    font-size: 3.6rem;
+    font-weight: 100;
+    letter-spacing: 1.2px; }
+  .ReactModal__Content.ReactModal__Content--after-open p {
+    font-size: 1.6rem;
+    font-weight: 100; }
+  .ReactModal__Content.ReactModal__Content--after-open form {
+    display: flex;
+    flex-direction: column; }
+    .ReactModal__Content.ReactModal__Content--after-open form .forminputs {
+      display: flex;
+      margin: 4rem 0 3rem 0; }
+      .ReactModal__Content.ReactModal__Content--after-open form .forminputs input {
+        padding: .5rem .8rem;
+        width: 50%;
+        background: rgba(255, 255, 255, 0);
+        color: #c6c6c6;
+        font-size: 1.4rem;
+        font-weight: 300;
+        border: none;
+        border-bottom: 2px solid #c6c6c6;
+        transition: all 0.5s ease-out; }
+        .ReactModal__Content.ReactModal__Content--after-open form .forminputs input:first-of-type {
+          margin-right: .5rem; }
+        .ReactModal__Content.ReactModal__Content--after-open form .forminputs input:last-of-type {
+          margin-left: .5rem; }
+        .ReactModal__Content.ReactModal__Content--after-open form .forminputs input:focus {
+          background: rgba(255, 255, 255, 0.1);
+          border-bottom: 2px solid rgba(255, 255, 255, 0); }
+    .ReactModal__Content.ReactModal__Content--after-open form .formactions {
+      display: flex;
+      justify-content: flex-end;
+      margin: 1.2rem 0 3rem 0; }
+      .ReactModal__Content.ReactModal__Content--after-open form .formactions button {
+        font-size: 1.2rem;
+        font-weight: 100;
+        letter-spacing: 1.1px;
+        text-transform: uppercase;
+        padding: 1.3rem 1.2rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-out; }
+        .ReactModal__Content.ReactModal__Content--after-open form .formactions button:last-of-type {
+          margin-left: 1.2rem; }
+        .ReactModal__Content.ReactModal__Content--after-open form .formactions button.button-low {
+          background: none;
+          color: #c6c6c6;
+          border: 1px solid #c6c6c6; }
+          .ReactModal__Content.ReactModal__Content--after-open form .formactions button.button-low:hover {
+            background: #c6c6c6;
+            color: #1f1f1f; }
+        .ReactModal__Content.ReactModal__Content--after-open form .formactions button.button-high {
+          background: #c6c6c6;
+          color: #1f1f1f;
+          border: 1px solid #1f1f1f; }
+          .ReactModal__Content.ReactModal__Content--after-open form .formactions button.button-high:hover {
+            background: #1f1f1f;
+            color: #c6c6c6; }
+
 section#shows {
   min-height: 100vh;
   background: url("../../images/bg2.jpg");
   background-size: cover;
   background-position: bottom;
-  background-attachment: fixed;
   color: #c6c6c6;
   display: flex;
   flex-direction: column;
@@ -178,7 +251,7 @@ section#shows {
   bottom: 0;
   left: 0;
   height: 2vh;
-  width: 100vw; }
+  width: 100%; }
   #footer p {
     margin: 0;
     margin-top: -3rem;

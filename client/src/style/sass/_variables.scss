@@ -10,5 +10,7 @@ $color-light-opaque-lite: rgba(198, 198, 198, .9);
 
 
 $transition-speed: .3s;
+$transition-speed-long: .5s;
 $transition-easing: ease-out;
 $transition: all $transition-speed $transition-easing;
+$transition-long: all $transition-speed-long $transition-easing;
