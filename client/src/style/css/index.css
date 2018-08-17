@@ -177,6 +177,7 @@ section#news {
         font-weight: 300;
         border: none;
         border-bottom: 2px solid #c6c6c6;
+        border-radius: 0;
         transition: all 0.5s ease-out; }
         .ReactModal__Content.ReactModal__Content--after-open form .forminputs input:first-of-type {
           margin-right: .5rem; }
@@ -187,9 +188,10 @@ section#news {
           border-bottom: 2px solid rgba(255, 255, 255, 0); }
     .ReactModal__Content.ReactModal__Content--after-open form .formactions {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       margin: 1.2rem 0 3rem 0; }
       .ReactModal__Content.ReactModal__Content--after-open form .formactions button {
+        width: 33%;
         font-size: 1.2rem;
         font-weight: 100;
         letter-spacing: 1.1px;
@@ -214,6 +216,37 @@ section#news {
           .ReactModal__Content.ReactModal__Content--after-open form .formactions button.button-high:hover {
             background: #1f1f1f;
             color: #c6c6c6; }
+  .ReactModal__Content.ReactModal__Content--after-open #loading, .ReactModal__Content.ReactModal__Content--after-open #completed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; }
+    .ReactModal__Content.ReactModal__Content--after-open #loading .icon, .ReactModal__Content.ReactModal__Content--after-open #completed .icon {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 3.5rem;
+      color: #c6c6c6; }
+    .ReactModal__Content.ReactModal__Content--after-open #loading p, .ReactModal__Content.ReactModal__Content--after-open #completed p {
+      font-size: 1.2rem;
+      text-align: center;
+      color: #c6c6c6; }
+    .ReactModal__Content.ReactModal__Content--after-open #loading button, .ReactModal__Content.ReactModal__Content--after-open #completed button {
+      width: 33%;
+      font-size: 1.2rem;
+      font-weight: 100;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      padding: 1.3rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-out; }
+      .ReactModal__Content.ReactModal__Content--after-open #loading button.button-high, .ReactModal__Content.ReactModal__Content--after-open #completed button.button-high {
+        background: #c6c6c6;
+        color: #1f1f1f;
+        border: 1px solid #1f1f1f; }
+        .ReactModal__Content.ReactModal__Content--after-open #loading button.button-high:hover, .ReactModal__Content.ReactModal__Content--after-open #completed button.button-high:hover {
+          background: #1f1f1f;
+          color: #c6c6c6; }
 
 section#shows {
   min-height: 100vh;

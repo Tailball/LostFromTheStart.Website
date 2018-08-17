@@ -1,6 +1,5 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faYoutubeSquare, faInstagram, faSpotify } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
