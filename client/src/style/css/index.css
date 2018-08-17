@@ -167,7 +167,7 @@ section#news {
     flex-direction: column; }
     .ReactModal__Content.ReactModal__Content--after-open form .forminputs {
       display: flex;
-      margin: 4rem 0 3rem 0; }
+      margin: 4rem 0 0 0; }
       .ReactModal__Content.ReactModal__Content--after-open form .forminputs input {
         padding: .5rem .8rem;
         width: 50%;
@@ -184,6 +184,34 @@ section#news {
         .ReactModal__Content.ReactModal__Content--after-open form .forminputs input:last-of-type {
           margin-left: .5rem; }
         .ReactModal__Content.ReactModal__Content--after-open form .forminputs input:focus {
+          background: rgba(255, 255, 255, 0.1);
+          border-bottom: 2px solid rgba(255, 255, 255, 0); }
+    .ReactModal__Content.ReactModal__Content--after-open form .formlabels {
+      display: flex;
+      margin: 2rem 0 0 0; }
+      .ReactModal__Content.ReactModal__Content--after-open form .formlabels p {
+        margin-left: 1rem;
+        font-size: 1rem;
+        font-weight: 100;
+        width: 50%; }
+    .ReactModal__Content.ReactModal__Content--after-open form .formselects {
+      display: flex;
+      margin: 0 0 3rem 0; }
+      .ReactModal__Content.ReactModal__Content--after-open form .formselects select {
+        padding: .5rem .8rem;
+        width: 50%;
+        background: rgba(255, 255, 255, 0);
+        color: #c6c6c6;
+        font-size: 1.4rem;
+        font-weight: 300;
+        border: none;
+        border-radius: 0;
+        transition: all 0.5s ease-out; }
+        .ReactModal__Content.ReactModal__Content--after-open form .formselects select:first-of-type {
+          margin-right: .5rem; }
+        .ReactModal__Content.ReactModal__Content--after-open form .formselects select:last-of-type {
+          margin-left: .5rem; }
+        .ReactModal__Content.ReactModal__Content--after-open form .formselects select:focus {
           background: rgba(255, 255, 255, 0.1);
           border-bottom: 2px solid rgba(255, 255, 255, 0); }
     .ReactModal__Content.ReactModal__Content--after-open form .formactions {
@@ -216,6 +244,10 @@ section#news {
           .ReactModal__Content.ReactModal__Content--after-open form .formactions button.button-high:hover {
             background: #1f1f1f;
             color: #c6c6c6; }
+  .ReactModal__Content.ReactModal__Content--after-open .error {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: darkred; }
   .ReactModal__Content.ReactModal__Content--after-open #loading, .ReactModal__Content.ReactModal__Content--after-open #completed {
     display: flex;
     flex-direction: column;

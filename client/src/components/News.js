@@ -18,8 +18,11 @@ class News extends React.Component {
             preorderStatus: 'request',
             preorder: {
                 email: '',
-                name: ''
-            }
+                name: '',
+                packageChoice: 'cd',
+                shirtSize: ''
+            },
+            preorderMessage: ''
         };
     }
 
@@ -36,7 +39,13 @@ class News extends React.Component {
     closePreorder = () => {
         this.togglePreorder(false);
         this.setState({
-            preorderStatus: 'request'
+            preorderStatus: 'request',
+            preorder: {
+                email: '',
+                name: '',
+                packageChoice: 'cd',
+                shirtSize: ''
+            }
         });
     }
 
@@ -58,8 +67,45 @@ class News extends React.Component {
         });
     }
 
+    changePackage = (evt) => {
+        console.log(evt.target.value);
+
+        this.setState({
+            preorder: {
+                ...this.state.preorder,
+                packageChoice: evt.target.value
+            }
+        });
+    }
+
+    changeSize = (evt) => {
+        console.log(evt.target.value);
+
+        this.setState({
+            preorder: {
+                ...this.state.preorder,
+                shirtSize: evt.target.value
+            }
+        });
+    }
+
     placeOrder = (e) => {
         e.preventDefault();
+
+        if(this.state.preorder.name === '') {
+            this.setState ({
+                preorderMessage: 'Please enter your name'
+            });
+            return;
+        }
+
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!re.test(this.state.preorder.email.toLowerCase())) {
+            this.setState ({
+                preorderMessage: 'Please enter a valid email address'
+            });
+            return;
+        }
 
         this.setState({
             preorderStatus: 'sending'
@@ -68,20 +114,32 @@ class News extends React.Component {
         axios.post('/api/preorder', {
             name: this.state.preorder.name,
             email: this.state.preorder.email,
-            choice: 1,
-            remarks: 'no remarks'
+            packageChoice: this.state.preorder.packageChoice,
+            shirtSize: this.state.preorder.shirtSize
         })
         .then ((response) => {
             setTimeout(() => {
-                this.setState({
-                    preorderStatus: 'completed'
-                });
+                if(response.data.success) {
+                    this.setState({
+                        preorderStatus: 'completed'
+                    });
+                } else {
+                    this.setState({
+                        preorderMessage: response.data.message
+                    })
+                }
             }, 350);
         })
         .catch((exc) => {
-            console.log(exc.message);
+            this.setState({
+                preorderMessage: exc.Message
+            });
         })
     };
+
+    hasShirtSelected = () => {
+        return this.state.preorder.packageChoice !== 'cd' && this.state.preorder.packageChoice !== 'cd-ep';
+    }
 
     render() {
         return (
@@ -99,9 +157,35 @@ class News extends React.Component {
                             <form>
                                 <div className="forminputs">
                                     <input placeholder="Your email address..." 
-                                        value={this.state.preorder.email} onChange={this.changeEmail} />
+                                           value={this.state.preorder.email} onChange={this.changeEmail} />
                                     <input placeholder="Your name..." 
-                                        value={this.state.preorder.name} onChange={this.changeName} />
+                                           value={this.state.preorder.name} onChange={this.changeName} />
+                                </div>
+
+                                <div className="formlabels">
+                                    <p>Choose preorder package</p>
+                                    { this.hasShirtSelected() &&
+                                        <p>Choose shirt size</p>    
+                                    }
+                                </div>
+                            
+                                <div className="formselects">
+                                    <select onChange={this.changePackage} value={this.state.preorder.packageChoice}>
+                                        <option value="cd">Cd only</option>
+                                        <option value="cd-ep">Cd and EP</option>
+                                        <option value="cd-shirt-m">Cd and shirt (male)</option>
+                                        <option value="cd-shirt-f">Cd and shirt (female)</option>
+                                    </select>
+
+                                    { this.hasShirtSelected() &&
+                                        <select onChange={this.changeSize} value={this.state.preorder.shirtSize}>
+                                            <option value="XS">XS</option>
+                                            <option value="S">S</option>
+                                            <option value="M">M</option>
+                                            <option value="L">L</option>
+                                            <option value="XL">XL</option>
+                                        </select>
+                                    }
                                 </div>
 
                                 <div className="formactions">
@@ -109,6 +193,10 @@ class News extends React.Component {
                                     <button className="button-high" onClick={this.placeOrder}>Place order!</button>
                                 </div>
                             </form>
+                        }
+
+                        { this.state.preorderMessage !== '' && 
+                            <p className="error">{this.state.preorderMessage}</p>
                         }
 
                         { this.state.preorderStatus === 'sending' && 
