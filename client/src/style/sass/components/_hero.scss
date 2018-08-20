@@ -17,9 +17,36 @@ section#hero {
         @media screen and (max-width: 1000px) {
             width: 75vw;
         }
+
+        @media screen and (max-width: 585px) {
+            width: 85vw;
+            margin-top: -5vh;
+        }
+
+        @media screen and (max-width: 375px) {
+            width: 90vw;
+            margin-top: 0;
+        }
     }
 
-    @media screen and (max-width: 575px) {
+    @media screen and (max-width: 755px) {
+        height: 80vh;
+    }
+
+    @media screen and (max-width: 675px) {
+        margin-top: 14vh;
+    }
+
+    @media screen and (max-width: 585px) {
+        height: 65vh;
         background-position: center center;
+    }
+
+    @media screen and (max-width: 475px) {
+        height: 50vh;
+    }
+
+    @media screen and (max-width: 375px) {
+        height: 40vh;
     }
 }

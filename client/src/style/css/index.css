@@ -63,7 +63,7 @@ section button, .formactions button {
   position: absolute;
   top: 0;
   left: 0;
-  min-height: 8vh;
+  height: 8vh;
   width: 100%;
   background-color: rgba(31, 31, 31, 0.8);
   color: #c6c6c6;
@@ -75,7 +75,9 @@ section button, .formactions button {
   @media screen and (max-width: 675px) {
     .navbar {
       flex-direction: column;
-      justify-content: flex-start; } }
+      justify-content: flex-start;
+      height: 14vh;
+      background-color: #1f1f1f; } }
   .navbar .navbar-social {
     display: flex;
     flex-direction: row;
@@ -147,12 +149,14 @@ section button, .formactions button {
       display: none;
       flex-direction: column;
       justify-content: flex-start;
-      text-align: center; }
+      text-align: center;
+      background-color: #1f1f1f; }
       .navbar .navbar-links.mobile .navbar-links-items a {
         padding-top: 2rem;
         padding-bottom: 2rem;
         border-top: 1px solid rgba(198, 198, 198, 0.7);
-        width: 100vw; }
+        width: 100vw;
+        background-color: #1f1f1f; }
 
 section#hero {
   height: 100vh;
@@ -169,9 +173,30 @@ section#hero {
     @media screen and (max-width: 1000px) {
       section#hero #logo {
         width: 75vw; } }
-  @media screen and (max-width: 575px) {
+    @media screen and (max-width: 585px) {
+      section#hero #logo {
+        width: 85vw;
+        margin-top: -5vh; } }
+    @media screen and (max-width: 375px) {
+      section#hero #logo {
+        width: 90vw;
+        margin-top: 0; } }
+  @media screen and (max-width: 755px) {
     section#hero {
+      height: 80vh; } }
+  @media screen and (max-width: 675px) {
+    section#hero {
+      margin-top: 14vh; } }
+  @media screen and (max-width: 585px) {
+    section#hero {
+      height: 65vh;
       background-position: center center; } }
+  @media screen and (max-width: 475px) {
+    section#hero {
+      height: 50vh; } }
+  @media screen and (max-width: 375px) {
+    section#hero {
+      height: 40vh; } }
 
 section#news {
   background: linear-gradient(to bottom, rgba(31, 31, 31, 0.8), rgba(10, 10, 10, 0.98)), url("../../images/Dark-Halftone-Screen-Small.png");
