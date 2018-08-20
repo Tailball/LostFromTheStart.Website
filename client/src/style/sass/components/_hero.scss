@@ -34,7 +34,7 @@ section#hero {
     }
 
     @media screen and (max-width: 675px) {
-        margin-top: 14vh;
+        margin-top: 16vh;
     }
 
     @media screen and (max-width: 585px) {
@@ -44,9 +44,5 @@ section#hero {
 
     @media screen and (max-width: 475px) {
         height: 50vh;
-    }
-
-    @media screen and (max-width: 375px) {
-        height: 40vh;
     }
 }

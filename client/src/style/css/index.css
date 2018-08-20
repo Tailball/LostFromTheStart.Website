@@ -76,7 +76,7 @@ section button, .formactions button {
     .navbar {
       flex-direction: column;
       justify-content: flex-start;
-      height: 14vh;
+      height: 16vh;
       background-color: #1f1f1f; } }
   .navbar .navbar-social {
     display: flex;
@@ -186,7 +186,7 @@ section#hero {
       height: 80vh; } }
   @media screen and (max-width: 675px) {
     section#hero {
-      margin-top: 14vh; } }
+      margin-top: 16vh; } }
   @media screen and (max-width: 585px) {
     section#hero {
       height: 65vh;
@@ -194,9 +194,6 @@ section#hero {
   @media screen and (max-width: 475px) {
     section#hero {
       height: 50vh; } }
-  @media screen and (max-width: 375px) {
-    section#hero {
-      height: 40vh; } }
 
 section#news {
   background: linear-gradient(to bottom, rgba(31, 31, 31, 0.8), rgba(10, 10, 10, 0.98)), url("../../images/Dark-Halftone-Screen-Small.png");
