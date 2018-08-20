@@ -14,6 +14,7 @@ class News extends React.Component {
         super(props);
 
         this.state = {
+            showPreorderButton: false,
             preorderBoxOpen: false,
             preorderStatus: 'request',
             preorder: {
@@ -219,7 +220,9 @@ class News extends React.Component {
                 <h1>few and far between</h1>
                 <h2>2018.09.29</h2>
                 <p>The first full-length, featuring singles 'Out Of Left Field' and 'Off The Hook'</p>
-                <button onClick={this.openPreorder}>Preorder now</button>
+                { this.state.showPreorderButton &&
+                    <button onClick={this.openPreorder}>Preorder now</button>
+                }
             </section>
         );
     }

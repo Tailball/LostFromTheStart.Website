@@ -9,10 +9,12 @@ section#news {
     justify-content: center;
     align-items: center;
 
+    padding-top: 8.5rem;
+    padding-bottom: 8.5rem;
+
     img {
         width: 60rem;
         height: 60rem;
-        margin-top: 8.5rem;
         margin-bottom: 2rem;
     }
 
@@ -39,29 +41,7 @@ section#news {
     }
 
     button {
-        background: none;
-        color: $color-light;
-
-        font-size: 1.2rem;
-        font-weight: 100;
-        letter-spacing: 1.1px;
-        text-transform: uppercase;
-        
-        padding: 1.3rem 1.2rem;
-
         margin-bottom: 8.5rem;
-
-        border: 1px solid $color-light;
-        border-radius: 5px;
-
-        cursor: pointer;
-
-        transition: $transition;
-
-        &:hover {
-            background: $color-light;
-            color: $color-dark;
-        }
     }
 }
 
@@ -160,7 +140,6 @@ section#news {
                 font-weight: 300;
 
                 border: none;
-                //border-bottom: 2px solid $color-light;
                 border-radius: 0;
 
                 transition: $transition-long;
@@ -186,42 +165,9 @@ section#news {
 
             button {
                 width: 33%;
-                font-size: 1.2rem;
-                font-weight: 100;
-                letter-spacing: 1.1px;
-                text-transform: uppercase;
-                padding: 1.3rem 1.2rem;
-                border-radius: 5px;
-                cursor: pointer;
-
-                transition: $transition;
 
                 &:last-of-type {
                     margin-left: 1.2rem;
-                }
-
-                &.button-low {
-                    background: none;
-                    color: $color-light;
-
-                    border: 1px solid $color-light;
-
-                    &:hover {
-                        background: $color-light;
-                        color: $color-dark;
-                    }
-                }
-
-                &.button-high {
-                    background: $color-light;
-                    color: $color-dark;
-
-                    border: 1px solid $color-dark;
-
-                    &:hover {
-                        background: $color-dark;
-                        color: $color-light;
-                    }
                 }
             }
         }
@@ -250,31 +196,6 @@ section#news {
             font-size: 1.2rem;
             text-align: center;
             color: $color-light;
-        }
-
-        button {
-            width: 33%;
-            font-size: 1.2rem;
-            font-weight: 100;
-            letter-spacing: 1.1px;
-            text-transform: uppercase;
-            padding: 1.3rem 1.2rem;
-            border-radius: 5px;
-            cursor: pointer;
-
-            transition: $transition;
-            
-            &.button-high {
-                background: $color-light;
-                color: $color-dark;
-    
-                border: 1px solid $color-dark;
-    
-                &:hover {
-                    background: $color-dark;
-                    color: $color-light;
-                }
-            }
         }
     }
 }

@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 
 const preorder = require('./api/routes/preorder');
+const shows = require('./api/routes/shows');
 
 
 //configure server
@@ -16,6 +17,7 @@ server.use(express.urlencoded( { extended: false }));
 //configure routes
 server.use('/', express.static('./client/build'));
 server.use('/api/preorder', preorder);
+server.use('/api/shows', shows);
 
 
 //start server

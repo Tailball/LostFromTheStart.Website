@@ -32,3 +32,57 @@ body {
 .bg-desktop {
     background-attachment: fixed !important;
 }
+
+section, .formactions {
+    button {
+        background: none;
+        color: $color-light;
+
+        font-size: 1.2rem;
+        font-weight: 100;
+        letter-spacing: 1.1px;
+        text-transform: uppercase;
+        
+        padding: 1.3rem 1.2rem;
+
+        border: 1px solid $color-light;
+        border-radius: 10px;
+
+        cursor: pointer;
+
+        transition: $transition;
+
+        &:hover {
+            background: $color-light;
+            color: $color-dark;
+            border-radius: 0px;
+        }
+
+        &.button-low {
+            background: none;
+            color: $color-light;
+
+            border: 1px solid $color-light;
+
+            &:hover {
+                background: $color-light;
+                color: $color-dark;
+                border-radius: 0px;
+            }
+        }
+
+        &.button-high {
+            background: $color-light;
+            color: $color-dark;
+
+            border: 1px solid $color-dark;
+
+            &:hover {
+                background: $color-dark;
+                color: $color-light;
+                border-color: $color-light;
+                border-radius: 0px;
+            }
+        }
+    }
+}

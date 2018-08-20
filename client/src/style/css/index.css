@@ -25,6 +25,40 @@ body {
 .bg-desktop {
   background-attachment: fixed !important; }
 
+section button, .formactions button {
+  background: none;
+  color: #c6c6c6;
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  padding: 1.3rem 1.2rem;
+  border: 1px solid #c6c6c6;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-out; }
+  section button:hover, .formactions button:hover {
+    background: #c6c6c6;
+    color: #1f1f1f;
+    border-radius: 0px; }
+  section button.button-low, .formactions button.button-low {
+    background: none;
+    color: #c6c6c6;
+    border: 1px solid #c6c6c6; }
+    section button.button-low:hover, .formactions button.button-low:hover {
+      background: #c6c6c6;
+      color: #1f1f1f;
+      border-radius: 0px; }
+  section button.button-high, .formactions button.button-high {
+    background: #c6c6c6;
+    color: #1f1f1f;
+    border: 1px solid #1f1f1f; }
+    section button.button-high:hover, .formactions button.button-high:hover {
+      background: #1f1f1f;
+      color: #c6c6c6;
+      border-color: #c6c6c6;
+      border-radius: 0px; }
+
 .navbar {
   position: absolute;
   top: 0;
@@ -101,11 +135,12 @@ section#news {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding-top: 8.5rem;
+  padding-bottom: 8.5rem; }
   section#news img {
     width: 60rem;
     height: 60rem;
-    margin-top: 8.5rem;
     margin-bottom: 2rem; }
   section#news h1 {
     font-weight: 100;
@@ -124,21 +159,7 @@ section#news {
     letter-spacing: 1.1px;
     margin-bottom: 2.8rem; }
   section#news button {
-    background: none;
-    color: #c6c6c6;
-    font-size: 1.2rem;
-    font-weight: 100;
-    letter-spacing: 1.1px;
-    text-transform: uppercase;
-    padding: 1.3rem 1.2rem;
-    margin-bottom: 8.5rem;
-    border: 1px solid #c6c6c6;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease-out; }
-    section#news button:hover {
-      background: #c6c6c6;
-      color: #1f1f1f; }
+    margin-bottom: 8.5rem; }
 
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
   background-color: rgba(0, 0, 0, 0.75) !important; }
@@ -219,31 +240,9 @@ section#news {
       justify-content: center;
       margin: 1.2rem 0 3rem 0; }
       .ReactModal__Content.ReactModal__Content--after-open form .formactions button {
-        width: 33%;
-        font-size: 1.2rem;
-        font-weight: 100;
-        letter-spacing: 1.1px;
-        text-transform: uppercase;
-        padding: 1.3rem 1.2rem;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease-out; }
+        width: 33%; }
         .ReactModal__Content.ReactModal__Content--after-open form .formactions button:last-of-type {
           margin-left: 1.2rem; }
-        .ReactModal__Content.ReactModal__Content--after-open form .formactions button.button-low {
-          background: none;
-          color: #c6c6c6;
-          border: 1px solid #c6c6c6; }
-          .ReactModal__Content.ReactModal__Content--after-open form .formactions button.button-low:hover {
-            background: #c6c6c6;
-            color: #1f1f1f; }
-        .ReactModal__Content.ReactModal__Content--after-open form .formactions button.button-high {
-          background: #c6c6c6;
-          color: #1f1f1f;
-          border: 1px solid #1f1f1f; }
-          .ReactModal__Content.ReactModal__Content--after-open form .formactions button.button-high:hover {
-            background: #1f1f1f;
-            color: #c6c6c6; }
   .ReactModal__Content.ReactModal__Content--after-open .error {
     font-size: 1.2rem;
     font-weight: 400;
@@ -262,23 +261,6 @@ section#news {
       font-size: 1.2rem;
       text-align: center;
       color: #c6c6c6; }
-    .ReactModal__Content.ReactModal__Content--after-open #loading button, .ReactModal__Content.ReactModal__Content--after-open #completed button {
-      width: 33%;
-      font-size: 1.2rem;
-      font-weight: 100;
-      letter-spacing: 1.1px;
-      text-transform: uppercase;
-      padding: 1.3rem 1.2rem;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease-out; }
-      .ReactModal__Content.ReactModal__Content--after-open #loading button.button-high, .ReactModal__Content.ReactModal__Content--after-open #completed button.button-high {
-        background: #c6c6c6;
-        color: #1f1f1f;
-        border: 1px solid #1f1f1f; }
-        .ReactModal__Content.ReactModal__Content--after-open #loading button.button-high:hover, .ReactModal__Content.ReactModal__Content--after-open #completed button.button-high:hover {
-          background: #1f1f1f;
-          color: #c6c6c6; }
 
 section#shows {
   min-height: 100vh;
@@ -289,13 +271,14 @@ section#shows {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding-top: 12rem;
+  padding-bottom: 15rem; }
   section#shows h1 {
     font-weight: 100;
     font-size: 3.2rem;
     letter-spacing: 1.2px;
-    margin: 0;
-    margin-top: 2rem; }
+    margin: 0; }
   section#shows h2 {
     font-weight: 400;
     font-size: 2rem;
@@ -304,8 +287,6 @@ section#shows {
   section#shows table {
     padding: 2rem;
     background-color: rgba(31, 31, 31, 0.8); }
-    section#shows table:last-of-type {
-      margin-bottom: 10rem; }
     section#shows table tr td {
       font-weight: 100;
       font-size: 1.6rem;

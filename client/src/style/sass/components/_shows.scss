@@ -11,12 +11,14 @@ section#shows {
     justify-content: center;
     align-items: center;
 
+    padding-top: 12rem;
+    padding-bottom: 15rem;
+
     h1 {
         font-weight: 100;
         font-size: 3.2rem;
         letter-spacing: 1.2px;
         margin: 0;
-        margin-top: 2rem;
     }
 
     h2 {
@@ -27,13 +29,8 @@ section#shows {
     }
 
     table {
-
         padding: 2rem;
         background-color: $color-dark-opaque;
-
-        &:last-of-type {
-            margin-bottom: 10rem;
-        }
 
         tr {
 
