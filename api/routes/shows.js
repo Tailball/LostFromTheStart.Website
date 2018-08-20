@@ -5,7 +5,7 @@ const axios = require('axios');
 const _ = require('lodash');
 
 router.get('/', (req, res) => {
-    axios.get('http://lostfromthestart.com/shows.js')
+    axios.get('http://lostfromthestart.com/shows.json')
         .then(returnData => {
             const newShows = _.filter(returnData.data.shows, show => new Date(show.date) >= new Date());
             const newShowsOrdered = _.orderBy(newShows, ['date'], ['asc']);
