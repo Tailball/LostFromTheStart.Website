@@ -56,7 +56,7 @@ class Navbar extends React.Component {
                 </div>
 
                 <div className="navbar-links desktop">
-                    <div class="navbar-links-items">
+                    <div className="navbar-links-items">
                         <a href="/">band</a>
                         <a href="/media">media</a>
                         <a href="#" target="_blank">merch</a>

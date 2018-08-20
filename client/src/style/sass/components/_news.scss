@@ -43,6 +43,10 @@ section#news {
         font-size: 1.4rem;
         letter-spacing: 1.1px;
         margin-bottom: 2.8rem;
+
+        @media screen and (max-width: 550px) {
+            width: 75vw;
+        }
     }
 
     button {
