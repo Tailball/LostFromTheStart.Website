@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
 
-    height: 8vh;
+    min-height: 8vh;
     width: 100%;
     
     background-color: $color-dark-opaque;
@@ -16,10 +16,22 @@
 
     border-bottom: 2px solid $color-light-opaque;
 
+    @media screen and (max-width: 675px) {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
     .navbar-social {
         display: flex;
         flex-direction: row;
         justify-content: center;
+
+        @media screen and (max-width: 675px) {
+            padding-top: 2vh;
+            justify-content: space-around;
+            margin-bottom: 2rem;
+            width: 100%;
+        }
 
         a {
             color: $color-light;
@@ -45,31 +57,80 @@
             font-size: 1.6rem;
             letter-spacing: 1.1px;
         }
+
+        @media screen and (max-width: 675px) {
+            display: none;
+        }
     }
 
-    .navbar-links {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    .navbar-links a {
+        color: $color-light;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        font-weight: 100;
+        text-decoration: none;
+        transition: $transition;
+        margin-top: 1px;
+        border-bottom: 1px solid $color-full-opaque;
 
-        a {
-            color: $color-light;
-            font-size: 1.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1.1px;
-            font-weight: 100;
-            text-decoration: none;
-            transition: $transition;
-            margin-top: 1px;
-            border-bottom: 1px solid $color-full-opaque;
+        &:not(:first-of-type) {
+            margin-left: 2vw;
 
-            &:not(:first-of-type) {
-                margin-left: 2vw;
+            @media screen and (max-width: 675px) {
+                margin: 0;
             }
+        }
 
-            &:hover {
-                color: white;
-                border-bottom: 1px solid white;
+        &:hover {
+            color: white;
+            border-bottom: 1px solid white;
+        }
+    }
+
+    .navbar-links.desktop {
+        .navbar-links-items {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 675px) {
+            display: none;
+        }
+    }
+
+    .navbar-links.mobile {
+        display: none;
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+
+        @media screen and (max-width: 675px) {
+            display: flex;
+        }
+
+        #menuToggle {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 400;
+
+            #menuToggleIconUp {
+                display: none;
+            }
+        }
+
+        .navbar-links-items {
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: center;
+
+            a {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                border-top: 1px solid $color-light-opaque;
+                width: 100vw;
             }
         }
     }

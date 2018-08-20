@@ -18,4 +18,8 @@ section#hero {
             width: 75vw;
         }
     }
+
+    @media screen and (max-width: 575px) {
+        background-position: center center;
+    }
 }

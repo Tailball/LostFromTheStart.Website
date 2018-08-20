@@ -16,6 +16,11 @@ section#news {
         width: 60rem;
         height: 60rem;
         margin-bottom: 2rem;
+
+        @media screen and (max-width: 750px) {
+            width: 60vw;
+            height: auto;
+        }
     }
 
     h1 {
