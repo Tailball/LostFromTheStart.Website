@@ -30,19 +30,16 @@ section#hero {
     }
 
     @media screen and (max-width: 755px) {
-        height: 80vh;
+        height: 88.5vh;
     }
-
+    
     @media screen and (max-width: 675px) {
-        margin-top: 16vh;
+        margin-top: 8vh;
+        height: 78.5vh;
     }
 
     @media screen and (max-width: 585px) {
-        height: 65vh;
+        height: 68.5vh;
         background-position: center center;
-    }
-
-    @media screen and (max-width: 475px) {
-        height: 50vh;
     }
 }

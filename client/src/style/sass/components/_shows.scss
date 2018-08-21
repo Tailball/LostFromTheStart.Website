@@ -49,11 +49,14 @@ section#shows {
     .shows.mobile {
         display: none;
         flex-direction: column;
-        width: 90vw;
-        background-color: $color-dark-opaque;
+        width: 75vw;
 
         @media screen and (max-width: 900px) {
             display: flex;
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 85vw;
         }
 
         .show {
@@ -61,6 +64,8 @@ section#shows {
             flex-direction: column;
             justify-content: flex-start;
             margin-bottom: 2rem;
+            background-color: $color-dark-opaque;
+            border-left: 2px solid $color-light-opaque;
 
             &-date {
                 font-size: 1.8rem;
