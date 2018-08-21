@@ -15,9 +15,14 @@ server.use(express.urlencoded( { extended: false }));
 
 
 //configure routes
-server.use('/', express.static('./client/build'));
 server.use('/api/preorder', preorder);
 server.use('/api/shows', shows);
+
+server.use('/band', express.static('./client/build'));
+server.use('/media', express.static('./client/build'));
+server.use('/merch', express.static('./client/build'));
+server.use('/contact', express.static('./client/build'));
+server.use('/', express.static('./client/build'));
 
 
 //start server

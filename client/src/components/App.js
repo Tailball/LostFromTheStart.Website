@@ -1,13 +1,13 @@
 import React from 'react';
-
-import isMobile from '../util/local';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Navbar from './Navbar';
-import News from './News';
-import Shows from './Shows';
 import Footer from './Footer';
-
-import logo from '../images/logo.png';
+import LandingPage from './LandingPage';
+import Band from './Band';
+import Media from './Media';
+import Merch from './Merch';
+import Contact from './Contact';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,21 +16,22 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="mainContainer">
-        <Navbar />
-
-        <section id="hero" className={isMobile() ? 'bg-mobile' : 'bg-desktop'}>
-          <img src={logo} 
-               alt="Lost From The Start logo"
-               id="logo" />
-        </section>
-
-        <News />
-        <Shows />
-  
-        <Footer />
-        
-      </div>
+      <BrowserRouter>
+        <div className="mainContainer">
+          <Navbar />
+          
+            <Switch>
+              <Route exact path="/" component={LandingPage} />
+              <Route path="/Band" component={Band} />
+              <Route path="/Media" component={Media} />
+              <Route path="/Merch" component={Merch} />
+              <Route path="/Contact" component={Contact} />
+            </Switch>
+          
+          <Footer />
+          
+        </div>
+      </BrowserRouter>
     );
   }
 }

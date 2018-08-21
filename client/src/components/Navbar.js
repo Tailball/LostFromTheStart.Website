@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink, Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faYoutubeSquare, faInstagram, faSpotify } from '@fortawesome/free-brands-svg-icons';
@@ -57,10 +58,17 @@ class Navbar extends React.Component {
 
                 <div className="navbar-links desktop">
                     <div className="navbar-links-items">
+                        <Link to="/">home</Link>
+                        <Link to="/band">band</Link>
+                        <Link to="/media">media</Link>
+                        <Link to="/merch">merch</Link>
+                        <Link to="/contact">contact</Link>
+                        {/*
                         <a href="/">band</a>
                         <a href="/media">media</a>
                         <a href="#" target="_blank">merch</a>
                         <a href="/contact">contact</a>
+                        */}
                     </div>
                 </div>
 
@@ -78,7 +86,8 @@ class Navbar extends React.Component {
                         </span>
                     </h3>
                     <div className="navbar-links-items" id="menuItems">
-                        <a href="/">band</a>
+                        <a href="/">home</a>
+                        <a href="/band">band</a>
                         <a href="/media">media</a>
                         <a href="#" target="_blank">merch</a>
                         <a href="/contact">contact</a>
