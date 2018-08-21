@@ -18,7 +18,7 @@ const bandmembers = {
         img: jochen,
         name: 'Jochen Panjaer',
         description: 'add description',
-        influences: 'Bad Religion, NOFX, A Day To Remember, Yellowcard, Neck Deep, The Used',
+        influences: 'Bad Religion, NOFX, A Day To Remember, Yellowcard, Neck Deep',
         funFact: 'add funfact'
     },
     Seppe: {

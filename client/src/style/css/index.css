@@ -476,11 +476,13 @@ section#band {
     section#band .bandmember ul {
       list-style-type: none;
       padding-left: 1.5rem;
-      text-align: center; }
+      text-align: left;
+      display: flex;
+      justify-content: space-between; }
       section#band .history ul li,
       section#band .featuring ul li,
       section#band .bandmember ul li {
-        display: inline-block;
+        display: block;
         font-weight: 100;
         font-size: 1.6rem;
         margin-right: 3.5rem;
