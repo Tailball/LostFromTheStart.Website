@@ -76,7 +76,6 @@ section button, .formactions button {
     .navbar {
       flex-direction: column;
       justify-content: flex-start;
-      min-height: 12vh;
       background-color: #1f1f1f; } }
   .navbar .navbar-social {
     display: flex;
@@ -88,15 +87,25 @@ section button, .formactions button {
         justify-content: space-around;
         margin-bottom: 2rem;
         width: 100%; } }
-    .navbar .navbar-social a {
+    .navbar .navbar-social a, .navbar .navbar-social #navbar-bars {
       color: #c6c6c6;
       font-size: 3rem;
       transition: all 0.3s ease-out; }
-      .navbar .navbar-social a:not(:last-of-type) {
+      .navbar .navbar-social a:not(:last-of-type), .navbar .navbar-social #navbar-bars:not(:last-of-type) {
         margin-right: 2vw; }
-      .navbar .navbar-social a:hover {
+      .navbar .navbar-social a:hover, .navbar .navbar-social #navbar-bars:hover {
         color: white;
         transform: scale(1.15); }
+    .navbar .navbar-social #navbar-bars {
+      display: none;
+      margin-top: 0px; }
+      @media screen and (max-width: 675px) {
+        .navbar .navbar-social #navbar-bars {
+          display: inline; } }
+      .navbar .navbar-social #navbar-bars p {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0; }
   .navbar .navbar-title {
     text-align: center; }
     .navbar .navbar-title h1 {

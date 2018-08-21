@@ -19,7 +19,6 @@
     @media screen and (max-width: 675px) {
         flex-direction: column;
         justify-content: flex-start;
-        min-height: 12vh;
         background-color: $color-dark;
     }
 
@@ -35,7 +34,7 @@
             width: 100%;
         }
 
-        a {
+        a, #navbar-bars {
             color: $color-light;
             font-size: 3rem;
             transition: $transition;
@@ -47,6 +46,21 @@
             &:hover {
                 color: white;
                 transform: scale(1.15);
+            }
+        }
+
+        #navbar-bars {
+            display: none;
+            margin-top: 0px;
+
+            @media screen and (max-width: 675px) {
+                display: inline;
+            }
+
+            p {
+                font-size: 1rem;
+                margin: 0;
+                padding: 0;
             }
         }
     }

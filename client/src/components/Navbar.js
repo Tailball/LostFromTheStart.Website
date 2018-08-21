@@ -1,33 +1,34 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleDown, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
+import { faCaretSquareDown, faCaretSquareUp } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faYoutubeSquare, faInstagram, faSpotify } from '@fortawesome/free-brands-svg-icons';
 
 class Navbar extends React.Component {
 
-    toggleNavMenu = (open) => {
-        const down = document.querySelector('#menuToggleIconDown');
-        const up = document.querySelector('#menuToggleIconUp');
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            menuOpen: false
+        };
+    }
+
+    toggleNavMenu = () => {
         const menu = document.querySelector('#menuItems');
+        const open = this.state.menuOpen;
 
-        if (open) {
-            down.style.display = 'none';
-            up.style.display = 'inline';
+        if (!open) {
             menu.style.display = 'flex';
+            this.setState({
+                menuOpen: true
+            });
         } else {
-            down.style.display = 'inline';
-            up.style.display = 'none';
             menu.style.display = 'none';
+            this.setState({
+                menuOpen: false
+            });
         }
-    }
-
-    showNavMenu = () => {
-        this.toggleNavMenu(true);
-    }
-
-    hideNavMenu = () => {
-        this.toggleNavMenu(false);
     }
 
     render() {
@@ -47,6 +48,11 @@ class Navbar extends React.Component {
                     <a href="https://www.youtube.com/playlist?list=PLdIGABl3LGR_zbTUdMHIGFmipVeiWadQV" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="icon" icon={faYoutubeSquare} />
                     </a>
+
+                    <div id="navbar-bars">
+                        <FontAwesomeIcon onClick={this.toggleNavMenu} className="icon" icon={this.state.menuOpen ? faCaretSquareDown : faCaretSquareUp} />
+                        <p>menu</p>
+                    </div>
                 </div>
 
                 <div className="navbar-title">
@@ -64,6 +70,7 @@ class Navbar extends React.Component {
                 </div>
 
                 <div className="navbar-links mobile">
+                    {/*
                     <h3 id="menuToggle">Show menu&nbsp;&nbsp;&nbsp;
                         <span id="menuToggleIconDown">
                             <FontAwesomeIcon 
@@ -76,6 +83,7 @@ class Navbar extends React.Component {
                                 onClick={this.hideNavMenu} />
                         </span>
                     </h3>
+                    */}
                     <div className="navbar-links-items" id="menuItems">
                         <Link to="/">home</Link>
                         <Link to="/band">band</Link>
