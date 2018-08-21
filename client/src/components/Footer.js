@@ -3,7 +3,10 @@ import React from 'react';
 const Footer = () => {
     return (
         <div id="footer">
-            <p>&copy; <a href="http://jochenpanjaer.be" target="_blank">JP Graphics - 2018</a> - all rights reserved</p>
+            <p>&copy; <a href="http://jochenpanjaer.be" target="_blank" rel="noopener noreferrer">
+                        JP Graphics - 2018
+                      </a> - all rights reserved
+            </p>
         </div>
     );
 }

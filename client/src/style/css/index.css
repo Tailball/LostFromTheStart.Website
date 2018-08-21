@@ -160,13 +160,11 @@ section button, .formactions button {
 
 #footer {
   position: absolute;
-  bottom: 0;
+  bottom: 2.5rem;
   left: 0;
-  height: 2vh;
   width: 100%; }
   #footer p {
     margin: 0;
-    margin-top: -3rem;
     text-align: center;
     font-size: 1.2rem;
     color: #c6c6c6; }
@@ -438,7 +436,80 @@ section#shows {
             text-align: left; } }
 
 section#band {
-  height: 100vh; }
+  height: 100vh;
+  width: 100%;
+  background: url("../../images/bg3.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #c6c6c6; }
+  section#band .history,
+  section#band .featuring,
+  section#band .bandmember {
+    width: 50vw;
+    background-color: rgba(31, 31, 31, 0.8);
+    margin-bottom: 2rem; }
+    section#band .history h1,
+    section#band .featuring h1,
+    section#band .bandmember h1 {
+      font-size: 3rem;
+      text-align: center; }
+    section#band .history h2,
+    section#band .featuring h2,
+    section#band .bandmember h2 {
+      font-size: 2rem;
+      padding-left: 1.5rem; }
+    section#band .history p,
+    section#band .featuring p,
+    section#band .bandmember p {
+      font-weight: 100;
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+      letter-spacing: 1.2px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem; }
+    section#band .history ul,
+    section#band .featuring ul,
+    section#band .bandmember ul {
+      list-style-type: none;
+      padding-left: 1.5rem;
+      text-align: center; }
+      section#band .history ul li,
+      section#band .featuring ul li,
+      section#band .bandmember ul li {
+        display: inline-block;
+        font-weight: 100;
+        font-size: 1.6rem;
+        margin-right: 3.5rem;
+        padding: .5rem;
+        cursor: pointer;
+        transition: all 0.3s ease-out; }
+        section#band .history ul li:hover,
+        section#band .featuring ul li:hover,
+        section#band .bandmember ul li:hover {
+          background-color: rgba(198, 198, 198, 0.7);
+          color: #1f1f1f; }
+  section#band .bandmember {
+    display: flex;
+    justify-content: flex-start; }
+    section#band .bandmember img {
+      width: 17.5rem;
+      height: 17.5rem;
+      padding: 1rem 0 1rem 1rem; }
+    section#band .bandmember-description {
+      margin-left: 2rem; }
+      section#band .bandmember-description h3 {
+        font-weight: 400;
+        font-size: 2rem;
+        color: #c6c6c6;
+        margin-top: 1rem; }
+      section#band .bandmember-description p {
+        padding: 0;
+        margin-bottom: .5rem;
+        margin-top: 0; }
 
 section#contact {
   height: 100vh; }

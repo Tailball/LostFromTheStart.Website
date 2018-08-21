@@ -10,9 +10,6 @@ import Merch from './Merch';
 import Contact from './Contact';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

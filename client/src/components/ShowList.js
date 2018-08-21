@@ -3,7 +3,7 @@ import React from 'react';
 const ShowList = (props) => {
     return (
         <div>
-            <table class="shows desktop">
+            <table className="shows desktop">
                 <tbody>
                     {
                         props.shows.map(show => (
@@ -17,13 +17,13 @@ const ShowList = (props) => {
                 </tbody>
             </table>
 
-            <div class="shows mobile">
+            <div className="shows mobile">
             {
                 props.shows.map(show => (
-                    <div class="show" key={show.date + show.location}>
-                        <p class="show-date">{show.date}</p>
-                        <p class="show-location">{show.location}</p>
-                        <p class="show-title">{show.title}</p>
+                    <div className="show" key={show.date + show.location}>
+                        <p className="show-date">{show.date}</p>
+                        <p className="show-location">{show.location}</p>
+                        <p className="show-title">{show.title}</p>
                     </div>
                 ))
             }

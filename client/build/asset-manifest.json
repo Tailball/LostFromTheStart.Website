@@ -1,12 +1,18 @@
 {
-  "main.css": "static/css/main.5373ee20.css",
-  "main.css.map": "static/css/main.5373ee20.css.map",
-  "main.js": "static/js/main.dff51b28.js",
-  "main.js.map": "static/js/main.dff51b28.js.map",
+  "main.css": "static/css/main.9e1f7817.css",
+  "main.css.map": "static/css/main.9e1f7817.css.map",
+  "main.js": "static/js/main.e061a91a.js",
+  "main.js.map": "static/js/main.e061a91a.js.map",
   "static/media/20.jpg": "static/media/20.053576fb.jpg",
   "static/media/Dark-Halftone-Screen-Small.png": "static/media/Dark-Halftone-Screen-Small.fffbe2a2.png",
   "static/media/album cover.png": "static/media/album cover.ff73ff5a.png",
   "static/media/bg1.jpg": "static/media/bg1.b797188f.jpg",
   "static/media/bg2.jpg": "static/media/bg2.0810f9f6.jpg",
-  "static/media/logo.png": "static/media/logo.e2efe0ac.png"
+  "static/media/bg3.jpg": "static/media/bg3.6d378c87.jpg",
+  "static/media/hildepic.jpg": "static/media/hildepic.e2d0f4f4.jpg",
+  "static/media/jochenpic.jpg": "static/media/jochenpic.d45d42df.jpg",
+  "static/media/laurenspic.jpg": "static/media/laurenspic.48330533.jpg",
+  "static/media/logo.png": "static/media/logo.e2efe0ac.png",
+  "static/media/robbypic.jpg": "static/media/robbypic.81eca74a.jpg",
+  "static/media/seppepic.jpg": "static/media/seppepic.04cc5b19.jpg"
 }

@@ -1,13 +1,10 @@
 import React from 'react';
-import {NavLink, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faYoutubeSquare, faInstagram, faSpotify } from '@fortawesome/free-brands-svg-icons';
 
 class Navbar extends React.Component {
-    constructor (props) {
-        super (props);
-    }
 
     toggleNavMenu = (open) => {
         const down = document.querySelector('#menuToggleIconDown');
@@ -38,16 +35,16 @@ class Navbar extends React.Component {
             <div className="navbar">
                     
                 <div className="navbar-social">
-                    <a href="https://www.facebook.com/lostfromthestartband" target="_blank">
+                    <a href="https://www.facebook.com/lostfromthestartband" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="icon" icon={faFacebookSquare} />
                     </a>
-                    <a href="https://www.instagram.com/lostfromthestartband/" target="_blank">
+                    <a href="https://www.instagram.com/lostfromthestartband/" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="icon" icon={faInstagram} />
                     </a>
-                    <a href="https://open.spotify.com/artist/6AVT9tIkQ0U18vDZbsIoha?si=4ya5wP8CTJqmVOfGFoLUTw" target="_blank">
+                    <a href="https://open.spotify.com/artist/6AVT9tIkQ0U18vDZbsIoha?si=4ya5wP8CTJqmVOfGFoLUTw" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="icon" icon={faSpotify} />
                     </a>
-                    <a href="https://www.youtube.com/playlist?list=PLdIGABl3LGR_zbTUdMHIGFmipVeiWadQV" target="_blank">
+                    <a href="https://www.youtube.com/playlist?list=PLdIGABl3LGR_zbTUdMHIGFmipVeiWadQV" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="icon" icon={faYoutubeSquare} />
                     </a>
                 </div>
@@ -63,12 +60,6 @@ class Navbar extends React.Component {
                         <Link to="/media">media</Link>
                         <Link to="/merch">merch</Link>
                         <Link to="/contact">contact</Link>
-                        {/*
-                        <a href="/">band</a>
-                        <a href="/media">media</a>
-                        <a href="#" target="_blank">merch</a>
-                        <a href="/contact">contact</a>
-                        */}
                     </div>
                 </div>
 
@@ -86,11 +77,11 @@ class Navbar extends React.Component {
                         </span>
                     </h3>
                     <div className="navbar-links-items" id="menuItems">
-                        <a href="/">home</a>
-                        <a href="/band">band</a>
-                        <a href="/media">media</a>
-                        <a href="#" target="_blank">merch</a>
-                        <a href="/contact">contact</a>
+                        <Link to="/">home</Link>
+                        <Link to="/band">band</Link>
+                        <Link to="/media">media</Link>
+                        <Link to="/merch">merch</Link>
+                        <Link to="/contact">contact</Link>
                     </div>
                 </div>
             </div>
