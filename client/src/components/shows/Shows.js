@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import isMobile from '../util/local';
+import isMobile from '../../util/local';
 
 import ShowList from './ShowList';
 

@@ -569,30 +569,32 @@ section#band {
     display: none;
     justify-content: flex-start;
     background-color: rgba(31, 31, 31, 0.8);
+    border-left: 2px solid rgba(198, 198, 198, 0.7);
     width: 97vw;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    padding: 1rem 0; }
     @media screen and (max-width: 575px) {
       section#band .bandmember-mobile {
         display: flex; } }
     section#band .bandmember-mobile img {
-      width: 12rem;
-      height: 12rem;
+      width: 11.5rem;
+      height: 11.5rem;
       padding: .5rem 0 .5rem .5rem;
       border-radius: 50%; }
       @media screen and (max-width: 425px) {
         section#band .bandmember-mobile img {
-          margin-top: 2vh;
+          margin-top: 1vh;
           width: 10rem;
           height: 10rem; } }
-    section#band .bandmember-mobile-description {
+    section#band .bandmember-mobile .bandmember-description {
       margin-left: 2rem; }
-      section#band .bandmember-mobile-description h3 {
+      section#band .bandmember-mobile .bandmember-description h3 {
         font-weight: 400;
         font-size: 2rem;
         color: #c6c6c6;
         margin-top: .5rem;
         margin-bottom: 1rem; }
-      section#band .bandmember-mobile-description p {
+      section#band .bandmember-mobile .bandmember-description p {
         padding: 0;
         margin-bottom: .5rem;
         margin-top: 0;

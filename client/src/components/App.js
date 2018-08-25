@@ -4,7 +4,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import LandingPage from './LandingPage';
-import Band from './Band';
+import Band from './band/Band';
 import Media from './Media';
 import Merch from './Merch';
 import Contact from './Contact';
