@@ -673,6 +673,11 @@ section#contact {
           font-size: 1.2rem;
           text-decoration: none;
           color: #c6c6c6; }
+      section#contact .contactbox-contact-lfts a {
+        transition: all .3s ease-out; }
+      section#contact .contactbox-contact-lfts a:hover {
+        background-color: #c6c6c6;
+        color: #1f1f1f; }
       @media screen and (max-width: 903px) {
         section#contact .contactbox-contact-lfts #links a {
           display: inline-block; } }
