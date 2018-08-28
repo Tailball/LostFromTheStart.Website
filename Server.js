@@ -22,6 +22,7 @@ server.use('/band', express.static('./client/build'));
 server.use('/media', express.static('./client/build'));
 server.use('/merch', express.static('./client/build'));
 server.use('/contact', express.static('./client/build'));
+server.use('/hilde', express.static('./client/build'));
 server.use('/', express.static('./client/build'));
 
 

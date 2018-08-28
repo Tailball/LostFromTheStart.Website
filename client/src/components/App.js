@@ -9,6 +9,8 @@ import Media from './media/Media';
 import Merch from './merch/Merch';
 import Contact from './contact/Contact';
 
+import Hilde from './fun/Hilde';
+
 class App extends React.Component {
 
   render() {
@@ -23,6 +25,8 @@ class App extends React.Component {
               <Route path="/Media" component={Media} />
               <Route path="/Merch" component={Merch} />
               <Route path="/Contact" component={Contact} />
+
+              <Route path="/Hilde" component={Hilde} />
             </Switch>
           
           <Footer />

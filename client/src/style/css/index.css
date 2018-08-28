@@ -712,3 +712,11 @@ section#media {
 
 section#merch {
   height: 100vh; }
+
+#fun-hilde {
+  width: 100%;
+  height: 100vh;
+  background: url("../../images/fun-hilde.jpg");
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: contain; }
