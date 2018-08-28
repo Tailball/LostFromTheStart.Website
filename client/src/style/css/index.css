@@ -154,13 +154,13 @@ section button, .formactions button {
       font-weight: 400; }
       .navbar .navbar-links.mobile #menuToggle #menuToggleIconUp {
         display: none; }
-    .navbar .navbar-links.mobile .navbar-links-items {
+    .navbar .navbar-links.mobile #menuItems {
       display: none;
       flex-direction: column;
       justify-content: flex-start;
       text-align: center;
       background-color: #1f1f1f; }
-      .navbar .navbar-links.mobile .navbar-links-items a {
+      .navbar .navbar-links.mobile #menuItems a {
         padding-top: 2rem;
         padding-bottom: 2rem;
         border-top: 1px solid rgba(198, 198, 198, 0.7);
@@ -602,7 +602,7 @@ section#band {
         font-weight: 100; }
 
 section#contact {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../../images/bg4.jpg");
   background-size: cover;
@@ -613,6 +613,10 @@ section#contact {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media screen and (max-width: 750px) {
+    section#contact {
+      padding-top: 11vh;
+      padding-bottom: 5vh; } }
   section#contact h1 {
     font-size: 3rem;
     text-align: center;
@@ -669,6 +673,9 @@ section#contact {
           font-size: 1.2rem;
           text-decoration: none;
           color: #c6c6c6; }
+      @media screen and (max-width: 903px) {
+        section#contact .contactbox-contact-lfts #links a {
+          display: inline-block; } }
     section#contact .contactbox-contact-label {
       display: flex;
       flex-direction: column;
@@ -677,6 +684,10 @@ section#contact {
       font-weight: bold;
       text-decoration: none;
       color: #c6c6c6; }
+      @media screen and (max-width: 903px) {
+        section#contact .contactbox-contact-label {
+          padding-right: 1rem;
+          padding-left: 1rem; } }
       @media screen and (max-width: 750px) {
         section#contact .contactbox-contact-label {
           padding-top: 5rem; } }
@@ -685,6 +696,8 @@ section#contact {
         height: 15rem;
         margin-bottom: 2rem; }
       section#contact .contactbox-contact-label p {
+        width: 100%;
+        text-align: center;
         font-weight: 100;
         letter-spacing: 1.2px;
         font-size: 1.2rem; }

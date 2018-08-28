@@ -40,7 +40,7 @@ class Navbar extends React.Component {
                     <a href="https://www.facebook.com/lostfromthestartband" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="icon" icon={faFacebookSquare} />
                     </a>
-                    <a href="https://www.instagram.com/lostfromthestartband/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/lostfromthestartband" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="icon" icon={faInstagram} />
                     </a>
                     <a href="https://open.spotify.com/artist/6AVT9tIkQ0U18vDZbsIoha?si=4ya5wP8CTJqmVOfGFoLUTw" target="_blank" rel="noopener noreferrer">
@@ -61,15 +61,11 @@ class Navbar extends React.Component {
                 </div>
 
                 <div className="navbar-links desktop">
-                    <div className="navbar-links-items">
-                        <Links />
-                    </div>
+                    <Links />
                 </div>
 
                 <div className="navbar-links mobile">
-                    <div className="navbar-links-items" id="menuItems">
-                        <Links />
-                    </div>
+                    <Links componentId="menuItems" />
                 </div>
             </div>
         );

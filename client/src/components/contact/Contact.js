@@ -27,9 +27,14 @@ const Contact = () => {
                            rel="noopener noreferrer">JP Graphics</a>
                     </div>
 
-                    <div className="contactbox-contact-lfts-item">
-                        <h2>Band members</h2>
-                        <p>Drop hier persoonlijke instagram / twitter accounts?</p>
+                    <div className="contactbox-contact-lfts-item" id="links">
+                        <h2>Links</h2>
+                        <a href="https://www.facebook.com/lostfromthestartband">Facebook</a>
+                        <a href="https://www.instagram.com/lostfromthestartband">Instagram</a>
+                        <a href="https://www.facebook.com/lostfromthestartband">Soundcloud</a>
+                        <a href="https://www.youtube.com/playlist?list=PLdIGABl3LGR_zbTUdMHIGFmipVeiWadQV">Youtube</a>
+                        <a href="https://lostfromthestart.bandcamp.com/">Bandcamp</a>
+                        <a href="https://lostfromthestart.bigcartel.com/">Bigcartel</a>
                     </div>
                 </div>
                 

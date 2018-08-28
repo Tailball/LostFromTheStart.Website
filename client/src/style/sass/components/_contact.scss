@@ -1,5 +1,5 @@
 section#contact {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 
     background: linear-gradient(to bottom, $color-dark-opaque-seethrough, $color-dark-opaque-seethrough), url('../../images/bg4.jpg');
@@ -13,6 +13,11 @@ section#contact {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 750px) {
+        padding-top: 11vh;
+        padding-bottom: 5vh;
+    }
 
     h1 {
         font-size: 3rem;
@@ -39,7 +44,6 @@ section#contact {
         }
         
         &-contact-lfts, &-contact-label {
-            // background-color: $color-dark-opaque;
             padding: 3rem 5rem;
 
             @media screen and (max-width: 750px) {
@@ -91,7 +95,14 @@ section#contact {
                 }
             }
 
+            #links {
 
+                a { 
+                    @media screen and (max-width: 903px) {
+                        display: inline-block;
+                    }
+                }
+            }
         }
 
         &-contact-label {
@@ -104,6 +115,11 @@ section#contact {
             text-decoration: none;
             color: $color-light;
 
+            @media screen and (max-width: 903px) {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+
             @media screen and (max-width: 750px) {
                 padding-top: 5rem;
             }
@@ -115,6 +131,8 @@ section#contact {
             }
 
             p {
+                width: 100%;
+                text-align: center;
                 font-weight: 100;
                 letter-spacing: 1.2px;
                 font-size: 1.2rem;

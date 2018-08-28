@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Links = () => {
+const Links = (props) => {
     return (
-        <div>
+        <div className="navbar-links-items" id={props.componentId}>
             <Link to="/">home</Link>
             <Link to="/band">band</Link>
             {/*}
