@@ -5,7 +5,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 
-import fewandfarbetweenalbum from '../images/album cover.png';
+import fewandfarbetweenalbum from '../images/album cover.jpg';
 
 
 Modal.setAppElement('#reactContainer');
