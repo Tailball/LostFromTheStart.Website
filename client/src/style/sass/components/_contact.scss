@@ -1,3 +1,124 @@
 section#contact {
     height: 100vh;
+    width: 100%;
+
+    background: linear-gradient(to bottom, $color-dark-opaque, $color-dark-opaque), url('../../images/bg4.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    color: $color-light;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 4rem;
+
+        @media screen and (max-width: 575px) {
+            display: none;
+        }
+    }
+
+    .contactbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80vw;
+
+        @media screen and (max-width: 750px) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 450px) {
+            width: 100vw;
+        }
+        
+        &-contact-lfts, &-contact-label {
+            // background-color: $color-dark-opaque;
+            padding: 3rem 5rem;
+
+            @media screen and (max-width: 750px) {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        &-contact-lfts {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            &-item {
+                text-align: left;
+                border-left: 2px solid $color-light-opaque;
+                padding-left: 1.5rem;
+
+                @media screen and (max-width: 750px) {
+                    width: 100%;
+                    text-align: center;
+                    border-left: none;
+                    padding: 0;
+                }
+                
+                &:not(:last-of-type) {
+                    margin-bottom: 2rem;
+
+                    @media screen and (max-width: 750px) {
+                        padding-bottom: 2rem;
+                        border-bottom: 1px solid $color-light-opaque;
+                    }
+                }
+
+                h2 {
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                    margin: .5rem;
+                    margin-bottom: 1rem;
+                }
+
+                p, a {
+                    margin: .5rem;
+                    font-weight: 100;
+                    letter-spacing: 1.2px;
+                    font-size: 1.2rem;
+                    text-decoration: none;
+                    color: $color-light;
+                }
+            }
+
+
+        }
+
+        &-contact-label {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: bold;
+            text-decoration: none;
+            color: $color-light;
+
+            @media screen and (max-width: 750px) {
+                padding-top: 5rem;
+            }
+
+            img {
+                width: 15rem;
+                height: 15rem;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-weight: 100;
+                letter-spacing: 1.2px;
+                font-size: 1.2rem;
+            }
+        }
+    }
 }

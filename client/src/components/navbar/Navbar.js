@@ -1,8 +1,9 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretSquareDown, faCaretSquareUp } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faYoutubeSquare, faInstagram, faSpotify } from '@fortawesome/free-brands-svg-icons';
+
+import Links from './Links';
 
 class Navbar extends React.Component {
 
@@ -61,35 +62,13 @@ class Navbar extends React.Component {
 
                 <div className="navbar-links desktop">
                     <div className="navbar-links-items">
-                        <Link to="/">home</Link>
-                        <Link to="/band">band</Link>
-                        <Link to="/media">media</Link>
-                        <Link to="/merch">merch</Link>
-                        <Link to="/contact">contact</Link>
+                        <Links />
                     </div>
                 </div>
 
                 <div className="navbar-links mobile">
-                    {/*
-                    <h3 id="menuToggle">Show menu&nbsp;&nbsp;&nbsp;
-                        <span id="menuToggleIconDown">
-                            <FontAwesomeIcon 
-                                icon={faAngleDoubleDown} 
-                                onClick={this.showNavMenu} />
-                        </span>
-                        <span id="menuToggleIconUp">
-                            <FontAwesomeIcon 
-                                icon={faAngleDoubleUp} 
-                                onClick={this.hideNavMenu} />
-                        </span>
-                    </h3>
-                    */}
                     <div className="navbar-links-items" id="menuItems">
-                        <Link to="/">home</Link>
-                        <Link to="/band">band</Link>
-                        <Link to="/media">media</Link>
-                        <Link to="/merch">merch</Link>
-                        <Link to="/contact">contact</Link>
+                        <Links />
                     </div>
                 </div>
             </div>

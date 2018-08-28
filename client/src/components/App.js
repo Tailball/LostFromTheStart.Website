@@ -1,13 +1,13 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import Navbar from './Navbar';
+import Navbar from './navbar/Navbar';
 import Footer from './Footer';
 import LandingPage from './LandingPage';
 import Band from './band/Band';
-import Media from './Media';
-import Merch from './Merch';
-import Contact from './Contact';
+import Media from './media/Media';
+import Merch from './merch/Merch';
+import Contact from './contact/Contact';
 
 class App extends React.Component {
 

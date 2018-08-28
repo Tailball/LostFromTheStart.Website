@@ -197,7 +197,7 @@ section#hero {
   align-items: center; }
   section#hero #logo {
     width: 65vw;
-    margin-top: -15vh; }
+    margin-top: -24vh; }
     @media screen and (max-width: 1000px) {
       section#hero #logo {
         width: 75vw; } }
@@ -602,7 +602,92 @@ section#band {
         font-weight: 100; }
 
 section#contact {
-  height: 100vh; }
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(31, 31, 31, 0.8), rgba(31, 31, 31, 0.8)), url("../../images/bg4.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #c6c6c6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  section#contact h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 4rem; }
+    @media screen and (max-width: 575px) {
+      section#contact h1 {
+        display: none; } }
+  section#contact .contactbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80vw; }
+    @media screen and (max-width: 750px) {
+      section#contact .contactbox {
+        flex-direction: column; } }
+    @media screen and (max-width: 450px) {
+      section#contact .contactbox {
+        width: 100vw; } }
+    section#contact .contactbox-contact-lfts, section#contact .contactbox-contact-label {
+      padding: 3rem 5rem; }
+      @media screen and (max-width: 750px) {
+        section#contact .contactbox-contact-lfts, section#contact .contactbox-contact-label {
+          padding: 1.5rem 1rem; } }
+    section#contact .contactbox-contact-lfts {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; }
+      section#contact .contactbox-contact-lfts-item {
+        text-align: left;
+        border-left: 2px solid rgba(198, 198, 198, 0.7);
+        padding-left: 1.5rem; }
+        @media screen and (max-width: 750px) {
+          section#contact .contactbox-contact-lfts-item {
+            width: 100%;
+            text-align: center;
+            border-left: none;
+            padding: 0; } }
+        section#contact .contactbox-contact-lfts-item:not(:last-of-type) {
+          margin-bottom: 2rem; }
+          @media screen and (max-width: 750px) {
+            section#contact .contactbox-contact-lfts-item:not(:last-of-type) {
+              padding-bottom: 2rem;
+              border-bottom: 1px solid rgba(198, 198, 198, 0.7); } }
+        section#contact .contactbox-contact-lfts-item h2 {
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 1.6rem;
+          margin: .5rem;
+          margin-bottom: 1rem; }
+        section#contact .contactbox-contact-lfts-item p, section#contact .contactbox-contact-lfts-item a {
+          margin: .5rem;
+          font-weight: 100;
+          letter-spacing: 1.2px;
+          font-size: 1.2rem;
+          text-decoration: none;
+          color: #c6c6c6; }
+    section#contact .contactbox-contact-label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      text-decoration: none;
+      color: #c6c6c6; }
+      @media screen and (max-width: 750px) {
+        section#contact .contactbox-contact-label {
+          padding-top: 5rem; } }
+      section#contact .contactbox-contact-label img {
+        width: 15rem;
+        height: 15rem;
+        margin-bottom: 2rem; }
+      section#contact .contactbox-contact-label p {
+        font-weight: 100;
+        letter-spacing: 1.2px;
+        font-size: 1.2rem; }
 
 section#media {
   height: 100vh; }
