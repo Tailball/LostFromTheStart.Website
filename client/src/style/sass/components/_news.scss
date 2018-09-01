@@ -69,9 +69,11 @@ section#news {
     transform: translate(-50%, -50%) !important;
 
     border: 2px solid $color-dark-opaque !important;
+    background: none !important;
+    border: none !important;
     
-    background: linear-gradient(to bottom, $color-dark-opaque, $color-dark-opaque-lite), url('../../images/20.jpg') !important;
-    padding: 3.5rem 5rem !important;
+    // background: linear-gradient(to bottom, $color-dark-opaque, $color-dark-opaque-lite), url('../../images/20.jpg') !important;
+    // padding: 3.5rem 5rem !important;
     
     color: $color-light !important;
 

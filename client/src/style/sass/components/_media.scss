@@ -1,3 +1,161 @@
 section#media {
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+
+    background: url('../../images/bg5.jpg');
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 7rem 0 10rem 0;
+
+    .music, .video {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        width: 100%;
+        text-align: center;
+        background-color: $color-dark-opaque;
+
+        h1 {
+            font-size: 2.6rem;
+            color: $color-light;
+            margin-bottom: 4.5rem;
+        }
+        
+    }
+
+    .music-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .music-album {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            text-align: left;
+
+            color: $color-light;
+
+            &:first-of-type {
+                margin-right: 14rem;
+            }
+
+            &-header {
+                border-bottom: 1px solid $color-light;
+
+                h2 {
+                    font-size: 2rem;
+                    font-weight: 100;
+                    letter-spacing: 1.1px;
+                    margin: 0;
+                }
+
+                p {
+                    margin-top: .5rem;
+                    font-size: 1.2rem;
+                    font-style: italic;
+                    font-weight: 400;
+                }
+            }
+
+            &-details {
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+
+                img {
+                    width: 20rem;
+                    height: 20rem;
+                    margin-right: 2rem;
+                }
+
+                &-tracklisting {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+
+                    h3 {
+                        font-size: 1.3rem;
+                        margin: 0;
+                    }
+    
+                    iframe {
+                        width: 100%;
+                        height: 24rem;
+                    }
+                }                
+
+                ul {
+                    padding: 0;
+                    list-style: none;
+
+                    li {
+                        list-style: none;
+                        font-size: 1.3rem;
+                        padding-top: .8rem;
+                        text-transform: capitalize;
+
+                        a {
+                            color: inherit;
+                            font-weight: 100;
+                            letter-spacing: 1.1px;
+                            text-decoration: none;
+                            border-bottom: 1px solid rgba(0,0,0,0);
+
+                            transition: $transition;
+
+                            &:hover {
+                                background-color: $color-light;
+                                color: $color-dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .video {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            a {
+                position: relative;
+                font-size: 1.3rem;
+                text-decoration: none;
+                color: $color-light;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                img {
+                    width: 30rem; 
+                    height: 19rem;
+                }
+
+                &:hover::before {
+                    content: "Out Of Left Field";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $color-dark-opaque-lite;
+                    z-index: 2;
+                }
+            }
+        }
+
+    }
 }

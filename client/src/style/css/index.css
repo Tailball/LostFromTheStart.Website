@@ -274,8 +274,8 @@ section#news {
   margin-right: -50% !important;
   transform: translate(-50%, -50%) !important;
   border: 2px solid rgba(31, 31, 31, 0.8) !important;
-  background: linear-gradient(to bottom, rgba(31, 31, 31, 0.8), rgba(10, 10, 10, 0.98)), url("../../images/20.jpg") !important;
-  padding: 3.5rem 5rem !important;
+  background: none !important;
+  border: none !important;
   color: #c6c6c6 !important; }
   .ReactModal__Content.ReactModal__Content--after-open h1 {
     font-size: 3.6rem;
@@ -708,7 +708,113 @@ section#contact {
         font-size: 1.2rem; }
 
 section#media {
-  height: 100vh; }
+  min-height: 100vh;
+  width: 100%;
+  background: url("../../images/bg5.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7rem 0 10rem 0; }
+  section#media .music, section#media .video {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(31, 31, 31, 0.8); }
+    section#media .music h1, section#media .video h1 {
+      font-size: 2.6rem;
+      color: #c6c6c6;
+      margin-bottom: 4.5rem; }
+  section#media .music-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    section#media .music-wrapper .music-album {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+      color: #c6c6c6; }
+      section#media .music-wrapper .music-album:first-of-type {
+        margin-right: 14rem; }
+      section#media .music-wrapper .music-album-header {
+        border-bottom: 1px solid #c6c6c6; }
+        section#media .music-wrapper .music-album-header h2 {
+          font-size: 2rem;
+          font-weight: 100;
+          letter-spacing: 1.1px;
+          margin: 0; }
+        section#media .music-wrapper .music-album-header p {
+          margin-top: .5rem;
+          font-size: 1.2rem;
+          font-style: italic;
+          font-weight: 400; }
+      section#media .music-wrapper .music-album-details {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%; }
+        section#media .music-wrapper .music-album-details img {
+          width: 20rem;
+          height: 20rem;
+          margin-right: 2rem; }
+        section#media .music-wrapper .music-album-details-tracklisting {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start; }
+          section#media .music-wrapper .music-album-details-tracklisting h3 {
+            font-size: 1.3rem;
+            margin: 0; }
+          section#media .music-wrapper .music-album-details-tracklisting iframe {
+            width: 100%;
+            height: 24rem; }
+        section#media .music-wrapper .music-album-details ul {
+          padding: 0;
+          list-style: none; }
+          section#media .music-wrapper .music-album-details ul li {
+            list-style: none;
+            font-size: 1.3rem;
+            padding-top: .8rem;
+            text-transform: capitalize; }
+            section#media .music-wrapper .music-album-details ul li a {
+              color: inherit;
+              font-weight: 100;
+              letter-spacing: 1.1px;
+              text-decoration: none;
+              border-bottom: 1px solid rgba(0, 0, 0, 0);
+              transition: all 0.3s ease-out; }
+              section#media .music-wrapper .music-album-details ul li a:hover {
+                background-color: #c6c6c6;
+                color: #1f1f1f; }
+  section#media .video {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+    section#media .video-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      section#media .video-list a {
+        position: relative;
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: #c6c6c6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        section#media .video-list a img {
+          width: 30rem;
+          height: 19rem; }
+        section#media .video-list a:hover::before {
+          content: "Out Of Left Field";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(10, 10, 10, 0.98);
+          z-index: 2; }
 
 section#merch {
   height: 100vh; }
