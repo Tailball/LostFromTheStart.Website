@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.f59f9719.css",
-  "main.css.map": "static/css/main.f59f9719.css.map",
-  "main.js": "static/js/main.15211828.js",
-  "main.js.map": "static/js/main.15211828.js.map",
+  "main.css": "static/css/main.12097052.css",
+  "main.css.map": "static/css/main.12097052.css.map",
+  "main.js": "static/js/main.db2a8f42.js",
+  "main.js.map": "static/js/main.db2a8f42.js.map",
   "static/media/Dark-Halftone-Screen-Small.png": "static/media/Dark-Halftone-Screen-Small.fffbe2a2.png",
   "static/media/album cover.jpg": "static/media/album cover.bf362cac.jpg",
   "static/media/album-echoavenue.jpg": "static/media/album-echoavenue.00b4b443.jpg",
@@ -20,5 +20,8 @@
   "static/media/logo.png": "static/media/logo.e2efe0ac.png",
   "static/media/robbypic.jpg": "static/media/robbypic.6dd36be1.jpg",
   "static/media/seppepic.jpg": "static/media/seppepic.04cc5b19.jpg",
+  "static/media/video-commonplace.jpg": "static/media/video-commonplace.f7cec3d1.jpg",
+  "static/media/video-mourningafter.jpg": "static/media/video-mourningafter.842bf056.jpg",
+  "static/media/video-nostalgicfordisaster.jpg": "static/media/video-nostalgicfordisaster.1c7f0958.jpg",
   "static/media/video-outofleftfield.jpg": "static/media/video-outofleftfield.3bce09c7.jpg"
 }

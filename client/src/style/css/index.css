@@ -710,23 +710,22 @@ section#contact {
 section#media {
   min-height: 100vh;
   width: 100%;
-  background: url("../../images/bg5.jpg");
+  background: linear-gradient(to bottom, rgba(31, 31, 31, 0.8), rgba(10, 10, 10, 0.98)), url("../../images/bg5.jpg");
   background-size: cover;
   background-position: center center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 7rem 0 10rem 0; }
+  padding: 5rem 0 7.5rem 0; }
   section#media .music, section#media .video {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     width: 100%;
-    text-align: center;
-    background-color: rgba(31, 31, 31, 0.8); }
+    text-align: center; }
     section#media .music h1, section#media .video h1 {
       font-size: 2.6rem;
       color: #c6c6c6;
-      margin-bottom: 4.5rem; }
+      margin-bottom: 2.5rem; }
   section#media .music-wrapper {
     display: flex;
     flex-direction: row;
@@ -804,17 +803,37 @@ section#media {
         color: #c6c6c6;
         display: flex;
         flex-direction: column;
-        justify-content: center; }
+        justify-content: center;
+        overflow: hidden;
+        border-radius: .8rem; }
+        section#media .video-list a:not(:last-of-type) {
+          margin-right: 5rem; }
         section#media .video-list a img {
           width: 30rem;
           height: 19rem; }
-        section#media .video-list a:hover::before {
-          content: "Out Of Left Field";
+        section#media .video-list a .overlay {
           position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          background: rgba(10, 10, 10, 0.98);
           width: 100%;
+          height: 0%;
+          opacity: 0;
+          transition: all .25s ease; }
+          section#media .video-list a .overlay p {
+            color: #c6c6c6;
+            font-size: 1.4rem;
+            text-align: center; }
+          section#media .video-list a .overlay svg {
+            font-size: 2.4rem; }
+        section#media .video-list a:hover .overlay {
           height: 100%;
-          background-color: rgba(10, 10, 10, 0.98);
-          z-index: 2; }
+          opacity: 1; }
 
 section#merch {
   height: 100vh; }
