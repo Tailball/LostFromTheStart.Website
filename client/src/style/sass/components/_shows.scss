@@ -28,6 +28,10 @@ section#shows {
         margin-top: 5rem;
         text-align: center;
 
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+
         .click-to-show {
             font-weight: 100;
             font-size: 1.2rem;

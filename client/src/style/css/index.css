@@ -386,6 +386,9 @@ section#shows {
     letter-spacing: 1px;
     margin-top: 5rem;
     text-align: center; }
+    @media screen and (max-width: 900px) {
+      section#shows h2 {
+        display: none; } }
     section#shows h2 .click-to-show {
       font-weight: 100;
       font-size: 1.2rem;
