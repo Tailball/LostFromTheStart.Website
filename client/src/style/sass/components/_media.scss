@@ -11,10 +11,10 @@ section#media {
     justify-content: center;
     align-items: center;
 
-    padding: 5rem 0 7.5rem 0;
+    padding: 6rem 0 7.5rem 0;
 
     .music, .video {
-        width: 60%;
+        max-width: 110rem;
 
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -28,93 +28,146 @@ section#media {
         
     }
 
-    .music-wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    .music {
 
-        .music-album {
+        @media screen and (max-width: 995px) {
+            max-width: none;
+            width: 100vw;
+        }
+
+        .music-wrapper {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
 
-            text-align: left;
-
-            color: $color-light;
-
-            &:first-of-type {
-                margin-right: 14rem;
+            @media screen and(max-width: 895px) {
+                flex-direction: column-reverse;
+                justify-content: flex-start;
+                align-items: center;
             }
 
-            &-header {
-                border-bottom: 1px solid $color-light;
-
-                h2 {
-                    font-size: 2rem;
-                    font-weight: 100;
-                    letter-spacing: 1.1px;
-                    margin: 0;
-                }
-
-                p {
-                    margin-top: .5rem;
-                    font-size: 1.2rem;
-                    font-style: italic;
-                    font-weight: 400;
-                }
+            @media screen and(max-width: 550px) {
+                margin-left: 2rem;
+                margin-right: 2rem;
             }
 
-            &-details {
-                margin-top: 2rem;
+            .music-album {
                 display: flex;
-                flex-direction: row;
-                justify-content: center;
-                width: 100%;
+                flex-direction: column;
+                justify-content: flex-start;
 
-                img {
-                    width: 20rem;
-                    height: 20rem;
-                    margin-right: 2rem;
+                text-align: left;
+
+                color: $color-light;
+
+                @media screen and (max-width: 995px) {
+                    margin: 0 4rem;
                 }
 
-                &-tracklisting {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
+                @media screen and(max-width: 895px) {
+                    width: 55rem;
+                    margin-left: 0;
+                    margin-right: 0;
+                    
+                    &:not(:first-of-type) { //Order is reversed due to column-reverse flex
+                        margin-bottom: 4rem;
+                    }
+                }
 
-                    h3 {
-                        font-size: 1.3rem;
+                @media screen and (max-width: 550px) {
+                    width: 100%;
+                }
+
+                &:first-of-type {
+                    margin-right: 8rem;
+
+                    @media screen and(max-width: 995px) {
+                        margin-right: 2rem;
+                    }
+                    @media screen and(max-width: 895px) {
+                        margin-right: 0;
+                    }
+                }
+
+                &-header {
+                    border-bottom: 1px solid $color-light;
+
+                    h2 {
+                        font-size: 2rem;
+                        font-weight: 100;
+                        letter-spacing: 1.1px;
                         margin: 0;
                     }
-    
-                    iframe {
-                        width: 100%;
-                        height: 24rem;
+
+                    p {
+                        margin-top: .5rem;
+                        font-size: 1.2rem;
+                        font-style: italic;
+                        font-weight: 400;
                     }
-                }                
+                }
 
-                ul {
-                    padding: 0;
-                    list-style: none;
+                &-details {
+                    margin-top: 2rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 100%;
 
-                    li {
+                    @media screen and (max-width: 510px) {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    img {
+                        width: 20rem;
+                        height: 20rem;
+                        margin-right: 2rem;
+
+                        @media screen and (max-width: 510px) {
+                            margin: 0 0 3rem 0;
+                        }
+                    }
+
+                    &-tracklisting {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+
+                        h3 {
+                            font-size: 1.3rem;
+                            margin: 0;
+                        }
+        
+                        iframe {
+                            width: 100%;
+                            height: 24rem;
+                        }
+                    }                
+
+                    ul {
+                        padding: 0;
                         list-style: none;
-                        font-size: 1.3rem;
-                        padding-top: .8rem;
-                        text-transform: capitalize;
 
-                        a {
-                            color: inherit;
-                            font-weight: 100;
-                            letter-spacing: 1.1px;
-                            text-decoration: none;
-                            border-bottom: 1px solid rgba(0,0,0,0);
+                        li {
+                            list-style: none;
+                            font-size: 1.3rem;
+                            padding-top: .8rem;
+                            text-transform: capitalize;
 
-                            transition: $transition;
+                            a {
+                                color: inherit;
+                                font-weight: 100;
+                                letter-spacing: 1.1px;
+                                text-decoration: none;
+                                border-bottom: 1px solid rgba(0,0,0,0);
 
-                            &:hover {
-                                background-color: $color-light;
-                                color: $color-dark;
+                                transition: $transition;
+
+                                &:hover {
+                                    background-color: $color-light;
+                                    color: $color-dark;
+                                }
                             }
                         }
                     }
@@ -137,6 +190,10 @@ section#media {
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: flex-start;
+
+                @media screen and (max-width: 895px) {
+                    display: none;
+                }
 
                 &:last-of-type {
                     justify-content: flex-start;
@@ -193,6 +250,30 @@ section#media {
                     &:hover .overlay {
                         height: 100%;
                         opacity: 1;
+                    }
+                }
+            }
+
+            &-row-mobile {
+                width: 100vw;
+
+                display: none;
+                flex-direction: column;
+                align-items: center;
+
+                @media screen and (max-width: 895px) {
+                    display: flex;
+                }
+
+                a {
+                    align-self: center;
+                    border-radius: .8rem;
+                    overflow: hidden;
+                    margin-top: 3rem;
+    
+                    img {
+                        max-width: 100%;
+                        height: auto;
                     }
                 }
             }

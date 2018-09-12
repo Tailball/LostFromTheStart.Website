@@ -86,3 +86,29 @@ section, .formactions {
         }
     }
 }
+
+//CSS Hack for Youtube iframes
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+
+    //Added these myself, doesn't work without this...
+    width: 80vw !important;
+    height: auto !important;
+
+    @media screen and (max-width: 895px) {
+        width: 100vw !important;
+    }
+    //
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

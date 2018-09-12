@@ -41,7 +41,9 @@ class Media extends React.Component {
                 <Modal isOpen={this.state.showModal}
                        shouldCloseOnOverlayClick={true}
                        onRequestClose={this.closeModal}>
+                    <div className="video-container">
                     {this.state.modalContent}
+                    </div>
                 </Modal>
     
                 <div className="music">
@@ -102,9 +104,10 @@ class Media extends React.Component {
 
                     <div className="video-list">
 
+                    {/* DESKTOP ORDERING */}
                         <div className="video-list-row">
                             <a href="#video-offthehook" 
-                            onClick={() => this.openModal(<iframe title="Off The Hook movie" width="560" height="315" src="https://www.youtube.com/embed/LzhU8C5IyZk?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
+                               onClick={() => this.openModal(<iframe title="Off The Hook movie" width="560" height="315" src="https://www.youtube.com/embed/LzhU8C5IyZk?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
                                 <img src={videoOffTheHook} alt="Video for off the hook field" />
 
                                 <div className="overlay">
@@ -155,6 +158,34 @@ class Media extends React.Component {
                                 </div>
                             </a>
                         </div>
+
+                    {/* MOBILE ORDERING */}
+                        <div className="video-list-row-mobile">
+                            <a href="#video-offthehook" 
+                               onClick={() => this.openModal(<iframe title="Off The Hook movie" width="560" height="315" src="https://www.youtube.com/embed/LzhU8C5IyZk?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
+                                <img src={videoOffTheHook} alt="Video for off the hook field" />
+                            </a>
+
+                            <a href="#video-oolf" 
+                               onClick={() => this.openModal(<iframe title="Out Of Left Field movie" width="560" height="315" src="https://www.youtube.com/embed/bA3STgJYs7A?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
+                                <img src={videoLeftField} alt="Video for out of left field" />
+                            </a>
+                       
+                            <a href="#video-nostalgic" 
+                               onClick={() => this.openModal(<iframe title="Nostalgic for disaster movie" width="560" height="315" src="https://www.youtube.com/embed/I0IOV27NcSA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
+                                <img src={videoNostalgic} alt="Video for nostalgic for disaster" />
+                            </a>
+                            <a href="#video-commonplace" 
+                               onClick={() => this.openModal(<iframe title="Commonplace video" width="560" height="315" src="https://www.youtube.com/embed/dLojSlbzoYo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
+                                <img src={videoCommon} alt="Video for commonplace" />
+                            </a>
+                       
+                            <a href="#video-mourning" 
+                               onClick={() => this.openModal(<iframe title="Mourning after video" width="560" height="315" src="https://www.youtube.com/embed/UeZyjwcHtp4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
+                                <img src={videoMourning} alt="Video for mourning after" />
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             
