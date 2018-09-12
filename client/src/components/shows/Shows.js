@@ -12,7 +12,8 @@ class Shows extends React.Component {
         this.state = {
             shows: {
                 old: [],
-                new: []
+                new: [],
+                showOld: false
             }
         };
     }
@@ -22,6 +23,7 @@ class Shows extends React.Component {
             .then (showData => {
                 this.setState({
                     shows: {
+                        ...this.state.shows,
                         old: showData.data.old,
                         new: showData.data.new
                     }
@@ -32,6 +34,17 @@ class Shows extends React.Component {
             });
     }
 
+    onClickOldShows = () => {
+        this.setState((prevstate) => {
+            return {
+                shows: {
+                    ...prevstate.shows,
+                    showOld: !prevstate.shows.showOld
+                }
+            };
+        });
+    }
+
     render () {
         return (
             <section id="shows" className={isMobile() ? 'bg-mobile' : 'bg-desktop'}>
@@ -40,8 +53,15 @@ class Shows extends React.Component {
                 <h2>Upcoming</h2>
                 <ShowList shows={this.state.shows.new} />
 
-                <h2>Previous</h2>
-                <ShowList shows={this.state.shows.old} />
+                <h2>Previous
+                    <br/>
+                    <span className="click-to-show" onClick={this.onClickOldShows}>
+                        (click to {this.state.shows.showOld ? 'hide' : 'show'})
+                    </span>
+                </h2>
+                { this.state.shows.showOld &&
+                    <ShowList shows={this.state.shows.old} />
+                }
             </section>
         );
     }

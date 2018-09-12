@@ -26,6 +26,19 @@ section#shows {
         font-size: 2rem;
         letter-spacing: 1px;
         margin-top: 5rem;
+        text-align: center;
+
+        .click-to-show {
+            font-weight: 100;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: $transition;
+
+            &:hover {
+                background-color: $color-light;
+                color: $color-dark;
+            }
+        }
     }
 
     .shows.desktop {

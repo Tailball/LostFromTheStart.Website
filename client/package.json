@@ -23,6 +23,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build-css": "node-sass-chokidar src/style/sass -o src/style/css"
+    "build-css": "node-sass-chokidar src/style/sass -o src/style/css --watch --recursive"
   }
 }

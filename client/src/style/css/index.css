@@ -384,7 +384,16 @@ section#shows {
     font-weight: 400;
     font-size: 2rem;
     letter-spacing: 1px;
-    margin-top: 5rem; }
+    margin-top: 5rem;
+    text-align: center; }
+    section#shows h2 .click-to-show {
+      font-weight: 100;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease-out; }
+      section#shows h2 .click-to-show:hover {
+        background-color: #c6c6c6;
+        color: #1f1f1f; }
   section#shows .shows.desktop {
     padding: 2rem;
     background-color: rgba(31, 31, 31, 0.8); }
