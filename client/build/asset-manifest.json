@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.eb3f3687.css",
-  "main.css.map": "static/css/main.eb3f3687.css.map",
-  "main.js": "static/js/main.267823ff.js",
-  "main.js.map": "static/js/main.267823ff.js.map",
+  "main.css": "static/css/main.7b7e49d6.css",
+  "main.css.map": "static/css/main.7b7e49d6.css.map",
+  "main.js": "static/js/main.6dfe13a5.js",
+  "main.js.map": "static/js/main.6dfe13a5.js.map",
   "static/media/Dark-Halftone-Screen-Small.png": "static/media/Dark-Halftone-Screen-Small.fffbe2a2.png",
   "static/media/album cover.jpg": "static/media/album cover.bf362cac.jpg",
   "static/media/album-echoavenue.jpg": "static/media/album-echoavenue.00b4b443.jpg",
@@ -23,5 +23,6 @@
   "static/media/video-commonplace.jpg": "static/media/video-commonplace.f7cec3d1.jpg",
   "static/media/video-mourningafter.jpg": "static/media/video-mourningafter.842bf056.jpg",
   "static/media/video-nostalgicfordisaster.jpg": "static/media/video-nostalgicfordisaster.1c7f0958.jpg",
+  "static/media/video-offthehook.jpg": "static/media/video-offthehook.4e93e9a3.jpg",
   "static/media/video-outofleftfield.jpg": "static/media/video-outofleftfield.3bce09c7.jpg"
 }

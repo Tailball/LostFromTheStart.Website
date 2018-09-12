@@ -10,6 +10,7 @@ import videoLeftField from '../../images/video-outofleftfield.jpg';
 import videoNostalgic from '../../images/video-nostalgicfordisaster.jpg';
 import videoCommon from '../../images/video-commonplace.jpg';
 import videoMourning from '../../images/video-mourningafter.jpg';
+import videoOffTheHook from '../../images/video-offthehook.jpg';
 
 class Media extends React.Component {
     constructor(props) {
@@ -100,45 +101,60 @@ class Media extends React.Component {
                     <h1>Videos</h1>
 
                     <div className="video-list">
-                        <a href="#video-oolf" 
-                           onClick={() => this.openModal(<iframe title="Out Of Left Field movie" width="560" height="315" src="https://www.youtube.com/embed/bA3STgJYs7A?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
-                            <img src={videoLeftField} alt="Video for out of left field" />
 
-                            <div className="overlay">
-                                <p>Watch 'Out Of Left Field'</p>
-                                <FontAwesomeIcon icon={faVideo} />
-                            </div>
-                        </a>
+                        <div className="video-list-row">
+                            <a href="#video-offthehook" 
+                            onClick={() => this.openModal(<iframe title="Off The Hook movie" width="560" height="315" src="https://www.youtube.com/embed/LzhU8C5IyZk?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
+                                <img src={videoOffTheHook} alt="Video for off the hook field" />
 
-                        <a href="#video-nostalgic" 
-                           onClick={() => this.openModal(<iframe width="560" height="315" src="https://www.youtube.com/embed/I0IOV27NcSA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
-                            <img src={videoNostalgic} alt="Video for nostalgic for disaster" />
+                                <div className="overlay">
+                                    <p>Watch 'Off The Hook'</p>
+                                    <FontAwesomeIcon icon={faVideo} />
+                                </div>
+                            </a>
 
-                            <div className="overlay">
-                                <p>Watch 'Nostalgic For Disaster'</p>
-                                <FontAwesomeIcon icon={faVideo} />
-                            </div>
-                        </a>
+                            <a href="#video-oolf" 
+                               onClick={() => this.openModal(<iframe title="Out Of Left Field movie" width="560" height="315" src="https://www.youtube.com/embed/bA3STgJYs7A?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
+                                <img src={videoLeftField} alt="Video for out of left field" />
 
-                        <a href="#video-commonplace" 
-                           onClick={() => this.openModal(<iframe width="560" height="315" src="https://www.youtube.com/embed/dLojSlbzoYo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
-                            <img src={videoCommon} alt="Video for commonplace" />
+                                <div className="overlay">
+                                    <p>Watch 'Out Of Left Field'</p>
+                                    <FontAwesomeIcon icon={faVideo} />
+                                </div>
+                            </a>
 
-                            <div className="overlay">
-                                <p>Watch 'Live video for Commonplace'</p>
-                                <FontAwesomeIcon icon={faVideo} />
-                            </div>
-                        </a>
+                            <a href="#video-nostalgic" 
+                               onClick={() => this.openModal(<iframe title="Nostalgic for disaster movie" width="560" height="315" src="https://www.youtube.com/embed/I0IOV27NcSA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
+                                <img src={videoNostalgic} alt="Video for nostalgic for disaster" />
 
-                        <a href="#video-mourning" 
-                           onClick={() => this.openModal(<iframe width="560" height="315" src="https://www.youtube.com/embed/UeZyjwcHtp4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
-                            <img src={videoMourning} alt="Video for mourning after" />
+                                <div className="overlay">
+                                    <p>Watch 'Nostalgic For Disaster'</p>
+                                    <FontAwesomeIcon icon={faVideo} />
+                                </div>
+                            </a>
+                        </div>
 
-                            <div className="overlay">
-                                <p>Watch 'Mourning After'</p>
-                                <FontAwesomeIcon icon={faVideo} />
-                            </div>
-                        </a>
+                        <div className="video-list-row">
+                            <a href="#video-commonplace" 
+                               onClick={() => this.openModal(<iframe title="Commonplace video" width="560" height="315" src="https://www.youtube.com/embed/dLojSlbzoYo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
+                                <img src={videoCommon} alt="Video for commonplace" />
+
+                                <div className="overlay">
+                                    <p>Watch 'Live video for Commonplace'</p>
+                                    <FontAwesomeIcon icon={faVideo} />
+                                </div>
+                            </a>
+
+                            <a href="#video-mourning" 
+                               onClick={() => this.openModal(<iframe title="Mourning after video" width="560" height="315" src="https://www.youtube.com/embed/UeZyjwcHtp4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
+                                <img src={videoMourning} alt="Video for mourning after" />
+
+                                <div className="overlay">
+                                    <p>Watch 'Mourning After'</p>
+                                    <FontAwesomeIcon icon={faVideo} />
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             
