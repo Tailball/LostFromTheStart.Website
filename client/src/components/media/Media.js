@@ -80,20 +80,14 @@ class Media extends React.Component {
                                 <img src={albumBetween} alt="Few And Far between album cover" />
                             
                                 <div className="music-album-details-tracklisting">
-                                    <h3>Tracklisting</h3>
-                                    <ul>
-                                        <li>This is getting out of hand</li>
-                                        <li>How things turned out</li>
-                                        <li>Out Of Left Field</li>
-                                        <li>sore throat, weak knees</li>
-                                        <li>april showers bring may flowers</li>
-                                        <li>castles</li>
-                                        <li>monitor the world</li>
-                                        <li>off the hook</li>
-                                        <li>cold shoulder</li>
-                                        <li>just another con artist</li>
-                                    </ul>
+                                    
+                                    <iframe src="https://open.spotify.com/embed/album/6vHc6bf4TSfwjuSCv8Z9Sx"
+                                            title="Few And Far Between playlist on Spotify"
+                                            frameBorder="0" 
+                                            allowtransparency="true"
+                                            allow="encrypted-media" />
                                 </div>
+
                             </div>
                         </div>
                     </div>

@@ -29,12 +29,12 @@ const Contact = () => {
 
                     <div className="contactbox-contact-lfts-item" id="links">
                         <h2>Links</h2>
-                        <a href="https://www.facebook.com/lostfromthestartband">Facebook</a>
-                        <a href="https://www.instagram.com/lostfromthestartband">Instagram</a>
-                        <a href="https://www.facebook.com/lostfromthestartband">Soundcloud</a>
-                        <a href="https://www.youtube.com/playlist?list=PLdIGABl3LGR_zbTUdMHIGFmipVeiWadQV">Youtube</a>
-                        <a href="https://lostfromthestart.bandcamp.com/">Bandcamp</a>
-                        <a href="https://lostfromthestart.bigcartel.com/">Bigcartel</a>
+                        <a href="https://www.facebook.com/lostfromthestartband" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="https://www.instagram.com/lostfromthestartband" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.facebook.com/lostfromthestartband" target="_blank" rel="noopener noreferrer">Soundcloud</a>
+                        <a href="https://www.youtube.com/playlist?list=PLdIGABl3LGR_zbTUdMHIGFmipVeiWadQV" target="_blank" rel="noopener noreferrer">Youtube</a>
+                        <a href="https://lostfromthestart.bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a>
+                        <a href="https://lostfromthestart.bigcartel.com/" target="_blank" rel="noopener noreferrer">Bigcartel</a>
                     </div>
                 </div>
                 
