@@ -2,7 +2,7 @@ section#contact {
     min-height: 100vh;
     width: 100%;
 
-    background: linear-gradient(to bottom, rgba(0,0,0,1),  rgba(0,0,0,.55)), url('../../images/bg4.jpg') black;
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.85), rgba(0,0,0,.76), rgba(0,0,0,.85), rgba(0,0,0,1)), url('../../images/bg4.jpg') black;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -28,6 +28,7 @@ section#contact {
         font-size: 3rem;
         text-align: center;
         margin-bottom: 4rem;
+        margin-top: -10vh;
 
         @media screen and (max-width: 575px) {
             display: none;
@@ -42,6 +43,10 @@ section#contact {
 
         @media screen and (max-width: 750px) {
             flex-direction: column;
+        }
+
+        @media screen and (max-width: 575px) and (min-height: 640px) {
+            margin-top: -10vh;
         }
 
         @media screen and (max-width: 450px) {

@@ -2,9 +2,11 @@ section#media {
     min-height: 100vh;
     width: 100%;
 
-    background: linear-gradient(to bottom, rgba(0,0,0,.75), rgba(0,0,0,.45)), url('../../images/bg5.jpg');
+    background: linear-gradient(to bottom, rgba(0,0,0,.75), rgba(0,0,0,.45)), url('../../images/bg5.jpg'), black;
     background-size: cover;
     background-position: top center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 
     display: flex;
     flex-direction: column;

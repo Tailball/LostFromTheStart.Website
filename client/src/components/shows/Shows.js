@@ -50,8 +50,20 @@ class Shows extends React.Component {
             <section id="shows" className={isMobile() ? 'bg-mobile' : 'bg-desktop'}>
                 <h1>Shows &amp; tours</h1>
             
-                <h2>Upcoming</h2>
-                <ShowList shows={this.state.shows.new} />
+                <h2>Upcoming
+                    <br/>
+                {
+                    (!this.state.shows.new || this.state.shows.new.length === 0) &&
+                    <span className="click-to-show">
+                        (Stay tuned for our upcoming shows!)
+                    </span>
+                }
+                </h2>
+                
+                {
+                    (this.state.shows.new && this.state.shows.new.length > 0) &&
+                    <ShowList shows={this.state.shows.new} />
+                }
 
                 <h2>Previous
                     <br/>

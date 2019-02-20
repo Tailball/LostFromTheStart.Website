@@ -15,21 +15,25 @@ class Navbar extends React.Component {
         };
     }
 
-    toggleNavMenu = () => {
+    toggleNavMenu = (alwaysClose = false) => {
         const menu = document.querySelector('#menuItems');
         const open = this.state.menuOpen;
 
-        if (!open) {
-            menu.style.display = 'flex';
-            this.setState({
-                menuOpen: true
-            });
-        } else {
+        if (open || !alwaysClose) {
             menu.style.display = 'none';
             this.setState({
                 menuOpen: false
             });
+        } else {
+            menu.style.display = 'flex';
+            this.setState({
+                menuOpen: true
+            });
         }
+    }
+
+    closeNavMenu = () => {
+        this.toggleNavMenu(true);
     }
 
     render() {
@@ -61,11 +65,11 @@ class Navbar extends React.Component {
                 </div>
 
                 <div className="navbar-links desktop">
-                    <Links />
+                    <Links onClick={this.closeNavMenu} />
                 </div>
 
                 <div className="navbar-links mobile">
-                    <Links componentId="menuItems" />
+                    <Links componentId="menuItems" onClick={this.closeNavMenu} />
                 </div>
             </div>
         );
