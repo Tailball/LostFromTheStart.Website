@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 const BandMember = (props) => {
     return (
         <div className={props.isMobile ? 'bandmember-mobile' : 'bandmember'}>
-            <img src={props.selectedMember.img} alt={'Picture of ' + props.selectedMember.name} />
+            <div className="bandmember-img">
+                <img src={props.selectedMember.img} alt={'Picture of ' + props.selectedMember.name} />
+            </div>
 
             <div className="bandmember-description">
                 <h3>{props.selectedMember.name}</h3>

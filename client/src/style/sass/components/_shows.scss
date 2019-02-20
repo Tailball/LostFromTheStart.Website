@@ -1,7 +1,7 @@
 section#shows {
     min-height: 100vh;
 
-    background: url('../../images/bg2.jpg');
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,.35), rgba(0,0,0,.12)), url('../../images/bg2.jpg');
     background-size: cover;
     background-position: bottom;
     color: $color-light;

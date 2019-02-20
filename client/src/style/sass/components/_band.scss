@@ -2,9 +2,9 @@ section#band {
     height: 100vh;
     width: 100%;
 
-    background: url('../../images/bg3.jpg');
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.69), rgba(0,0,0,.87), rgba(0,0,0,1)), url('../../images/bg3.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: top center;
 
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ section#band {
     .featuring,
     .bandmember {
         width: 50vw;
-        background-color: $color-dark-opaque;
+        background-color: rgba(0,0,0,.75);
         margin-bottom: 2rem;
 
         @media screen and (max-width: 1578px){
@@ -100,16 +100,35 @@ section#band {
     .bandmember {
         display: flex;
         justify-content: flex-start;
+        position: relative;
 
         @media screen and (max-width: 575px){
             display: none;
         }
 
-        img {
-            width: 17.5rem;
-            height: 17.5rem;
-            padding: 1rem 0 1rem 1rem;
-            border-radius: 50%;
+        &-img {
+            margin: 3vh 1rem 1rem 1rem;  
+            // padding: 1rem 0 1rem 1rem;
+            position: relative;
+
+            img {
+                width: auto;
+                height: 15rem;        
+            }
+    
+            &::after {
+                content: "";
+
+                display: block;
+                position: absolute;
+                
+                bottom: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.3), rgba(0,0,0,.8), rgba(0,0,0,1));
+            }  
         }
 
         &-description {

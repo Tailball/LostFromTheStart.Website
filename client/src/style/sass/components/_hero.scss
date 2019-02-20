@@ -1,9 +1,10 @@
 section#hero {
     height: 100vh;
 
-    background: url('../../images/bg1.jpg');
+    background: url('../../images/bg1.jpg'), black;
     background-size: cover;
     background-position: bottom center;
+    background-repeat: no-repeat;
 
     display: flex;
     flex-direction: column;
@@ -12,21 +13,30 @@ section#hero {
 
     #logo {
         width: 65vw;
-        margin-top: -24vh;
+        margin-top: 55vh;
 
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1650px) {
+            margin-top: 62.5vh;
+        }
+
+        @media screen and (max-width: 1065px) {
             width: 75vw;
         }
 
-        @media screen and (max-width: 585px) {
+        @media screen and (max-width: 755px) {
             width: 85vw;
-            margin-top: -5vh;
+            margin-top: 48vh;
         }
 
         @media screen and (max-width: 375px) {
             width: 90vw;
-            margin-top: 0;
         }
+    }
+
+    @media screen and (max-width: 1065px) {
+        background-position: center center;
+        background-size: 185% auto;
+        height: 88.5vh;
     }
 
     @media screen and (max-width: 755px) {
@@ -40,6 +50,5 @@ section#hero {
 
     @media screen and (max-width: 585px) {
         height: 68.5vh;
-        background-position: center center;
     }
 }
