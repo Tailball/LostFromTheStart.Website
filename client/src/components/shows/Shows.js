@@ -45,9 +45,16 @@ class Shows extends React.Component {
         });
     }
 
+    defineClass = () => {
+        let className = isMobile() ? 'bg-mobile' : 'bg-desktop';
+        className += ` ${this.props.type}`;
+
+        return className;
+    }
+
     render () {
         return (
-            <section id="shows" className={isMobile() ? 'bg-mobile' : 'bg-desktop'}>
+            <section id="shows" className={this.defineClass()}>
                 <h1>Shows &amp; tours</h1>
             
                 <h2>Upcoming

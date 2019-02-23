@@ -388,7 +388,6 @@ section#news {
 
 section#shows {
   min-height: 100vh;
-  background: linear-gradient(to top, black, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.12)), url("../../images/bg2.jpg");
   background-size: cover;
   background-position: bottom;
   color: #c6c6c6;
@@ -398,6 +397,12 @@ section#shows {
   align-items: center;
   padding-top: 12rem;
   padding-bottom: 15rem; }
+  section#shows.regular {
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.12)), url("../../images/bg2.jpg"); }
+  section#shows.alt1 {
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.12)), url("../../images/bg2-1.jpg"); }
+  section#shows.alt2 {
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.12)), url("../../images/bg2-2.jpg"); }
   section#shows h1 {
     font-weight: 100;
     font-size: 3.2rem;

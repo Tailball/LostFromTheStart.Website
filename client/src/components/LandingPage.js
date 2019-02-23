@@ -9,7 +9,9 @@ const LandingPage = () => {
         <div>
             <Hero />
             <News />
-            <Shows />
+            <Shows type="regular" />
+            <Shows type="alt1" />
+            <Shows type="alt2" />
         </div>
     );
 }
