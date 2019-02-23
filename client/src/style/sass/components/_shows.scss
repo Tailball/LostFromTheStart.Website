@@ -1,8 +1,6 @@
 section#shows {
     min-height: 100vh;
 
-    background-size: cover;
-    background-position: bottom;
     color: $color-light;
 
     display: flex;
@@ -15,14 +13,23 @@ section#shows {
 
     &.regular {
         background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,.35), rgba(0,0,0,.12)), url('../../images/bg2.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
     }
 
     &.alt1 {
         background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,.35), rgba(0,0,0,.12)), url('../../images/bg2-1.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
     }
 
     &.alt2 {
         background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,.35), rgba(0,0,0,.12)), url('../../images/bg2-2.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
     }
 
     h1 {
