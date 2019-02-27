@@ -49,9 +49,9 @@ const bandmembers = {
         img: robson,
         name: 'Robby Mangelschots',
         funFacts: [
-            'Would sell your wife to buy new equipment for his home studio.',
-            'Has listened to so much click-track in his life, his mind works in 1/8\'s.',
-            'Owns the largest collection of pokéball shirts of anyone (current count: one shirt).'
+            'Would exchange his girlfriend for a free gig.',
+            'Plays drum fills that last for days.',
+            'When you hear a gutted pig sqeal, it might as well be him.'
         ]
     }
 }

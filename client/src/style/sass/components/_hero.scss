@@ -13,7 +13,7 @@ section#hero {
 
     #logo {
         width: 65vw;
-        margin-top: 55vh;
+        margin-top: 60vh;
 
         @media screen and (max-width: 1650px) {
             margin-top: 62.5vh;
@@ -36,19 +36,9 @@ section#hero {
     @media screen and (max-width: 1065px) {
         background-position: center center;
         background-size: 185% auto;
-        height: 88.5vh;
     }
 
-    @media screen and (max-width: 755px) {
-        height: 88.5vh;
-    }
-    
     @media screen and (max-width: 675px) {
         margin-top: 8vh;
-        height: 78.5vh;
-    }
-
-    @media screen and (max-width: 585px) {
-        height: 68.5vh;
     }
 }
