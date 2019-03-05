@@ -19,13 +19,13 @@ class Shows extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('/api/shows')
+        axios.get('api/shows?mode=formatted')
             .then (showData => {
                 this.setState({
                     shows: {
                         ...this.state.shows,
-                        old: showData.data.old,
-                        new: showData.data.new
+                        old: showData.data.payload.old,
+                        new: showData.data.payload.new
                     }
                 });
             })

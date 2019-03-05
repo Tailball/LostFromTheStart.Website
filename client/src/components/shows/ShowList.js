@@ -8,9 +8,9 @@ const ShowList = (props) => {
                     {
                         props.shows.map(show => (
                             <tr key={show.date + show.location}>
-                                <td>{show.date}</td>
+                                <td>{show.date.split('T')[0]}</td>
                                 <td>{show.location}</td>
-                                <td>{show.title}</td>
+                                <td>{show.name}</td>
                             </tr>
                         ))
                     }
@@ -21,9 +21,9 @@ const ShowList = (props) => {
             {
                 props.shows.map(show => (
                     <div className="show" key={show.date + show.location}>
-                        <p className="show-date">{show.date}</p>
+                        <p className="show-date">{show.date.split('T')[0]}</p>
                         <p className="show-location">{show.location}</p>
-                        <p className="show-title">{show.title}</p>
+                        <p className="show-title">{show.name}</p>
                     </div>
                 ))
             }

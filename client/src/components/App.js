@@ -9,7 +9,7 @@ import Media from './media/Media';
 import Merch from './merch/Merch';
 import Contact from './contact/Contact';
 
-import Hilde from './fun/Hilde';
+import Admin from './admin/Admin';
 
 class App extends React.Component {
 
@@ -26,7 +26,7 @@ class App extends React.Component {
               <Route path="/Merch" component={Merch} />
               <Route path="/Contact" component={Contact} />
 
-              <Route path="/Hilde" component={Hilde} />
+              <Route path="/Admin" component={Admin} />
             </Switch>
           
           <Footer />

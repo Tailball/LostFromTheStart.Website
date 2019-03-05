@@ -1,5 +1,6 @@
 const express = require('express');
 const http = require('http');
+const Mongoose = require('mongoose');
 
 const preorder = require('./api/routes/preorder');
 const shows = require('./api/routes/shows');
@@ -12,6 +13,25 @@ const port = process.env.PORT || 5000;
 
 server.use(express.json());
 server.use(express.urlencoded( { extended: false }));
+server.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  //res.setHeader('Access-Control-Allow-Credentials', true);
+
+  next();
+});
+
+
+//configure db
+const db = Mongoose.connect(
+  'mongodb://lfts-admin:lfts-password@cluster0-shard-00-00-09fte.mongodb.net:27017,cluster0-shard-00-01-09fte.mongodb.net:27017,cluster0-shard-00-02-09fte.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true', 
+  { useNewUrlParser: true },
+  (err) => {
+    console.log(' > connected to db');
+    if(err) console.log(' > error in db', err);
+  }
+);
 
 
 //configure routes
@@ -22,13 +42,15 @@ server.use('/band', express.static('./client/build'));
 server.use('/media', express.static('./client/build'));
 server.use('/merch', express.static('./client/build'));
 server.use('/contact', express.static('./client/build'));
-server.use('/hilde', express.static('./client/build'));
+server.use('/admin', express.static('./client/build'));
 server.use('/', express.static('./client/build'));
 
 
 //start server
 server.listen(port, () => console.log(' > Lost From The Start API server running, now listening...'));
 
+
+//keep alive
 const herokuKeepAliveTime = 500000;
 setInterval(() => {
   console.log('keeping alive...');
