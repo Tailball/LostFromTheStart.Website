@@ -5,6 +5,9 @@ class Admin extends React.Component {
     constructor(props) {
         super(props);
 
+        //this.apiLocation = 'http://localhost:5000/api';
+        this.apiLocation = '../api';
+
         this.state = {
             createShow: {
                 date: this.getDateNow(),
@@ -12,12 +15,18 @@ class Admin extends React.Component {
                 location: ''
             },
             shows: [],
-            validation: ''
+            validation: '',
+            authentication: {
+                loggedIn: false,
+                logInResult: '',
+                username: '',
+                password: ''
+            }
         };
     }
 
     componentDidMount() {
-        this.getShows();
+        //get shows is now only called after logging in
     }
 
     getDateNow = () => {
@@ -30,7 +39,7 @@ class Admin extends React.Component {
     }
 
     getShows = () => {
-        Axios.get('../api/shows?mode=admin')
+        Axios.get(`${this.apiLocation}/shows?mode=admin`)
             .then(showData => {
                 this.setState({ shows: showData.data.payload });
             })
@@ -38,8 +47,15 @@ class Admin extends React.Component {
     }
 
     deleteShow = (id) => {
-        Axios.post('../api/shows', 
-                   { action: 'DELETE', id: id })
+        Axios.post(`${this.apiLocation}/shows`, 
+                   { 
+                       auth: { 
+                           username: this.state.authentication.username,
+                           password: this.state.authentication.password
+                       },
+                       action: 'DELETE', 
+                       id: id 
+                    })
              .then(() => this.getShows())
              .catch(err => console.log(err));
     }
@@ -54,8 +70,12 @@ class Admin extends React.Component {
             return;
         }
 
-        Axios.post('../api/shows', 
+        Axios.post(`${this.apiLocation}/shows`, 
             { 
+                auth: {
+                    username: this.state.authentication.username,
+                    password: this.state.authentication.password
+                },
                 action: 'POST', 
                 date: this.state.createShow.date, 
                 name: this.state.createShow.name, 
@@ -117,51 +137,131 @@ class Admin extends React.Component {
         });
     }
 
+    updateUsername = (e) => {
+        this.setState({
+            authentication: {
+                ...this.state.authentication,
+                username: e.target.value
+            }
+        });
+    }
+
+    updatePassword = (e) => {
+        this.setState({
+            authentication: {
+                ...this.state.authentication,
+                password: e.target.value
+            }
+        });
+    }
+
+    login = () => {
+        Axios.post(`${this.apiLocation}/auth/login`, 
+            { 
+                username: this.state.authentication.username, 
+                password: this.state.authentication.password 
+            })
+            .then(result => {
+                const data = result.data;
+                console.log('result', result.data);
+
+                if (data.loginResult === 'success') {
+                    this.setState({
+                        authentication: {
+                            ...this.state.authentication,
+                            loggedIn: true,
+                            logInResult: data.loginResult
+                        }
+                    }, () => this.getShows());
+                }
+                else if (data.loginResult === 'failed') {
+                    this.setState({
+                        authentication: {
+                            ...this.state.authentication,
+                            loggedIn: false,
+                            logInResult: data.loginResult
+                        }
+                    });
+                }
+            })
+            .catch(err => console.log(err));
+    }
+
     render() {
         return (
-            <section id="admin">
-                <div className="createShow">
-                    <h1>Create new show</h1>
+            <React.Fragment>
 
-                    <div className="formgroup">
-                        <label>Date</label>
-                        <input type="date" onChange={this.updateDate} value={this.state.createShow.date} />
+                <section id="admin">
+                    <div className="authentication">
+                        <p className="username">Logged in as <span>{this.state.authentication.username}</span></p>
                     </div>
 
-                    <div className="formgroup">
-                        <label>Name</label>
-                        <input type="text" onChange={this.updateName} value={this.state.createShow.name} />
+                    <div className="createShow">
+                        <h1>Create new show</h1>
+
+                        <div className="formgroup">
+                            <label>Date</label>
+                            <input type="date" onChange={this.updateDate} value={this.state.createShow.date} />
+                        </div>
+
+                        <div className="formgroup">
+                            <label>Name</label>
+                            <input type="text" onChange={this.updateName} value={this.state.createShow.name} />
+                        </div>
+
+                        <div className="formgroup">
+                            <label>Location</label>
+                            <input type="text" onChange={this.updateLocation} value={this.state.createShow.location} />
+                        </div>
+                        
+                        { this.state.validation &&
+                            <p id="error">{this.state.validation}</p>
+                        }
+
+                        <button onClick={this.createShow}>Create show!</button>
+
                     </div>
 
-                    <div className="formgroup">
-                        <label>Location</label>
-                        <input type="text" onChange={this.updateLocation} value={this.state.createShow.location} />
+                    <div className="editShows">
+                        <h1>Edit shows</h1>
+
+                        <table>
+                            <tbody>
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Location</th>
+                                <th>Action</th>
+                            </tr>
+                            {this.renderShows()}
+                            </tbody>
+                        </table>
                     </div>
-                    
-                    { this.state.validation &&
-                        <p id="error">{this.state.validation}</p>
-                    }
+                </section>
 
-                    <button onClick={this.createShow}>Create show!</button>
+                { !this.state.authentication.loggedIn &&
+                    <div className="loginbox">
+                        <h1>Log in to receive admin privileges</h1>
+                        
+                        <div className="formgroup">
+                            <label>Username</label>
+                            <input type="text" onChange={this.updateUsername} value={this.state.authentication.username} />
+                        </div>
 
-                </div>
+                        <div className="formgroup">
+                            <label>Password</label>
+                            <input type="password" onChange={this.updatePassword} value={this.state.authentication.password} />
+                        </div>
 
-                <div className="editShows">
-                    <h1>Edit shows</h1>
+                        { this.state.authentication.logInResult === 'failed' &&
+                            <p id="login-error">Couldn't log in with your credentials</p>
+                        }
 
-                    <table>
-                        <tbody>
-                        <tr>
-                            <th>Date</th>
-                            <th>Name</th>
-                            <th>Location</th>
-                            <th>Action</th>
-                        </tr>
-                        {this.renderShows()}
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+                        <button onClick={this.login}>Log in!</button>
+                    </div>
+                }
+
+            </React.Fragment>
         );
     }
 };

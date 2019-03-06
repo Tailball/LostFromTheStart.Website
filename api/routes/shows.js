@@ -1,9 +1,9 @@
 const express = require('express');
-const router = express.Router();
-
-const axios = require('axios');
 const _ = require('lodash');
 
+const router = express.Router();
+
+const cfg = require('../../configuration/serverconfig');
 const Show = require('../../mongoDB/models/Show');
 
 //
@@ -40,6 +40,10 @@ router.get('/', (req, res) => {
 // POST api/shows
 //
 router.post('/', (req, res) => {
+    if((!req.body.auth || !req.body.auth.username || !req.body.auth.password) || 
+       (req.body.auth.username !== cfg.username || req.body.auth.password !== cfg.password))
+        return res.status(401).json({message: 'not authorized'});
+
     switch(req.body.action) {
         case 'POST':
             postShow(req, res);
@@ -52,8 +56,6 @@ router.post('/', (req, res) => {
 });
 
 const postShow = (req, res) => {
-    console.log(req.body);
-
     const show = new Show({ 
         date: req.body.date,
         name: req.body.name,
@@ -67,12 +69,8 @@ const postShow = (req, res) => {
 }
 
 const deleteShow = (req, res) => {
-    console.log(req.body);
-
     Show.findOne({ _id: req.body.id }).exec()
         .then(show => {
-
-            console.log(show);
 
             if(!show) {
                 res.status(404).json({success: true});

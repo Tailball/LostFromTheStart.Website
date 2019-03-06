@@ -2,8 +2,7 @@ const express = require('express');
 const http = require('http');
 const Mongoose = require('mongoose');
 
-const preorder = require('./api/routes/preorder');
-const shows = require('./api/routes/shows');
+const cfg = require('./configuration/serverconfig');
 
 
 //configure server
@@ -24,9 +23,7 @@ server.use(function (req, res, next) {
 
 
 //configure db
-const db = Mongoose.connect(
-  'mongodb://lfts-admin:lfts-password@cluster0-shard-00-00-09fte.mongodb.net:27017,cluster0-shard-00-01-09fte.mongodb.net:27017,cluster0-shard-00-02-09fte.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true', 
-  { useNewUrlParser: true },
+const db = Mongoose.connect(cfg.dbUri, { useNewUrlParser: true },
   (err) => {
     console.log(' > connected to db');
     if(err) console.log(' > error in db', err);
@@ -35,9 +32,12 @@ const db = Mongoose.connect(
 
 
 //configure routes
-server.use('/api/preorder', preorder);
-server.use('/api/shows', shows);
+//API
+server.use('/api/preorder', require('./api/routes/preorder'));
+server.use('/api/shows', require('./api/routes/shows'));
+server.use('/api/auth', require('./api/routes/auth'));
 
+//CLIENT
 server.use('/band', express.static('./client/build'));
 server.use('/media', express.static('./client/build'));
 server.use('/merch', express.static('./client/build'));

@@ -982,6 +982,13 @@ section#merch {
   background-position: fixed;
   color: white;
   font-size: 1.4rem; }
+  #admin .authentication {
+    width: 17vw;
+    margin: 12.5vh 5vw 0 auto;
+    text-align: right;
+    display: flex; }
+    #admin .authentication span {
+      font-style: italic; }
   #admin .createShow, #admin .editShows {
     margin: 12.5vh auto 0 auto;
     width: 80vw;
@@ -991,31 +998,6 @@ section#merch {
     align-items: center; }
     #admin .createShow h1, #admin .editShows h1 {
       font-size: 2.6rem; }
-  #admin .createShow .formgroup {
-    display: flex;
-    margin-bottom: 10px; }
-    #admin .createShow .formgroup label {
-      width: 8vw;
-      text-align: right;
-      margin-right: 15px;
-      margin-top: 6px; }
-    #admin .createShow .formgroup input {
-      width: 35vw;
-      background-color: rgba(255, 255, 255, 0.4);
-      padding: 8px;
-      height: 18px;
-      border: none;
-      outline: none;
-      border-radius: 5px;
-      font-size: 1.6rem;
-      transition: all 300ms ease-in-out; }
-      #admin .createShow .formgroup input:active, #admin .createShow .formgroup input:focus {
-        background-color: rgba(0, 0, 0, 0.6);
-        color: white; }
-  #admin .createShow #error {
-    color: red;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px; }
   #admin .createShow button {
     margin-top: 30px; }
   #admin .editShows > table {
@@ -1036,3 +1018,70 @@ section#merch {
       background: none;
       padding: 0;
       padding-left: 15px; }
+
+#admin > .createShow > .formgroup,
+.loginbox > .formgroup {
+  display: flex;
+  margin-bottom: 10px; }
+  #admin > .createShow > .formgroup label,
+  .loginbox > .formgroup label {
+    width: 8vw;
+    text-align: right;
+    margin-right: 15px;
+    margin-top: 6px; }
+  #admin > .createShow > .formgroup input,
+  .loginbox > .formgroup input {
+    width: 35vw;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 8px;
+    height: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    transition: all 300ms ease-in-out; }
+    #admin > .createShow > .formgroup input:active, #admin > .createShow > .formgroup input:focus,
+    .loginbox > .formgroup input:active,
+    .loginbox > .formgroup input:focus {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white; }
+
+.loginbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; }
+  .loginbox label {
+    font-size: 1.4rem; }
+  .loginbox h1 {
+    font-size: 2.8rem; }
+  .loginbox button {
+    background: none;
+    color: #c6c6c6;
+    font-size: 1.2rem;
+    font-weight: 100;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    padding: 1.3rem 1.2rem;
+    border: 1px solid #c6c6c6;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-out; }
+    .loginbox button:hover {
+      background: #c6c6c6;
+      color: #1f1f1f;
+      border-radius: 0px; }
+
+#error,
+#login-error {
+  color: red;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px; }
