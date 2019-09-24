@@ -504,7 +504,7 @@ section#band {
     section#band {
       padding-top: 20vh;
       padding-bottom: 10vh;
-      background: none; } }
+      background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.8), black); } }
   section#band .history {
     margin-top: 5vh; }
   section#band .history,

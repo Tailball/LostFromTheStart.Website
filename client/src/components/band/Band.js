@@ -6,7 +6,7 @@ import hilde from '../../images/hildepic.jpg';
 import seppe from '../../images/seppepic.jpg';
 import jochen from '../../images/jochenpic.jpg';
 import robby from '../../images/robbypic.jpg';
-import robson from '../../images/robsonpic.jpg';
+import seb from '../../images/sebpic.jpg';
 
 const bandmembers = {
     Hilde: {
@@ -45,13 +45,13 @@ const bandmembers = {
             'Loved the carousel as a kid, and hasn\'t stopped turning around ever since.'
         ]
     },
-    Robson: {
-        img: robson,
-        name: 'Robby Mangelschots',
+    Sebastiaan: {
+        img: seb,
+        name: 'Sebastiaan Clabots',
         funFacts: [
             'Would exchange his girlfriend for a free gig.',
             'Plays drum fills that last for days.',
-            'When you hear a gutted pig sqeal, it might as well be him.'
+            'Drinkedy drinkedy drinkedy drink.'
         ]
     }
 }
@@ -78,8 +78,8 @@ class Band extends React.Component {
             case 'robby': 
                 member = bandmembers.Robby;
                 break;
-            case 'robson':
-                member = bandmembers.Robson;
+            case 'sebastiaan':
+                member = bandmembers.Sebastiaan;
                 break;
             default:
                 member = bandmembers.Hilde;
@@ -116,7 +116,7 @@ class Band extends React.Component {
                         <li onClick={this.changeMember} data-member="seppe">Seppe<br />6-string</li>
                         <li onClick={this.changeMember} data-member="jochen">Jochen<br />6-string</li>
                         <li onClick={this.changeMember} data-member="robby">Robby<br />4-string</li>
-                        <li onClick={this.changeMember} data-member="robson">Robson<br />Sticks</li>
+                        <li onClick={this.changeMember} data-member="sebastiaan">Sebastiaan<br />Sticks</li>
                     </ul>
                 </div>
 
@@ -126,7 +126,7 @@ class Band extends React.Component {
                 <BandMember isMobile={true} selectedMember={bandmembers.Seppe} />
                 <BandMember isMobile={true} selectedMember={bandmembers.Jochen} />
                 <BandMember isMobile={true} selectedMember={bandmembers.Robby} />
-                <BandMember isMobile={true} selectedMember={bandmembers.Robson} />
+                <BandMember isMobile={true} selectedMember={bandmembers.Sebastiaan} />
                 
             </section>
         );

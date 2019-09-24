@@ -11,6 +11,8 @@ import videoNostalgic from '../../images/video-nostalgicfordisaster.jpg';
 import videoCommon from '../../images/video-commonplace.jpg';
 import videoMourning from '../../images/video-mourningafter.jpg';
 import videoOffTheHook from '../../images/video-offthehook.jpg';
+import videoAprilShowers from '../../images/video-aprilshowers.jpg';
+import videoMedley from '../../images/video-medley.jpg';
 
 class Media extends React.Component {
     constructor(props) {
@@ -100,16 +102,38 @@ class Media extends React.Component {
 
                     {/* DESKTOP ORDERING */}
                         <div className="video-list-row">
+                            <a href="#video-medley"
+                                onClick={() => this.openModal(<iframe title="Poppunk medley movie" width="560" height="315" src="https://www.youtube.com/embed/dFhlNGbqcjw?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
+                                <img src={videoMedley} alt="Video for pop punk medley" />
+
+                                <div className="overlay">
+                                    <p>Watch 'Pop punk medley'</p>
+                                    <FontAwesomeIcon icon={faVideo} />
+                                </div>
+                            </a>
+
+                            <a href="#video-aprilshowers"
+                               onClick={() => this.openModal(<iframe title="April showers movie" width="560" height="315" src="https://www.youtube.com/embed/ODoNLJBtiig?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
+                                <img src={videoAprilShowers} alt="Video for april showers" />
+
+                                <div className="overlay">
+                                    <p>Watch 'April Showers'</p>
+                                    <FontAwesomeIcon icon={faVideo} />
+                                </div>
+                            </a>
+
                             <a href="#video-offthehook" 
                                onClick={() => this.openModal(<iframe title="Off The Hook movie" width="560" height="315" src="https://www.youtube.com/embed/LzhU8C5IyZk?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
-                                <img src={videoOffTheHook} alt="Video for off the hook field" />
+                                <img src={videoOffTheHook} alt="Video for off the hook" />
 
                                 <div className="overlay">
                                     <p>Watch 'Off The Hook'</p>
                                     <FontAwesomeIcon icon={faVideo} />
                                 </div>
                             </a>
-
+                        </div>
+                        
+                        <div className="video-list-row">
                             <a href="#video-oolf" 
                                onClick={() => this.openModal(<iframe title="Out Of Left Field movie" width="560" height="315" src="https://www.youtube.com/embed/bA3STgJYs7A?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
                                 <img src={videoLeftField} alt="Video for out of left field" />
@@ -129,9 +153,7 @@ class Media extends React.Component {
                                     <FontAwesomeIcon icon={faVideo} />
                                 </div>
                             </a>
-                        </div>
-
-                        <div className="video-list-row">
+                        
                             <a href="#video-commonplace" 
                                onClick={() => this.openModal(<iframe title="Commonplace video" width="560" height="315" src="https://www.youtube.com/embed/dLojSlbzoYo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
                                 <img src={videoCommon} alt="Video for commonplace" />
@@ -141,7 +163,9 @@ class Media extends React.Component {
                                     <FontAwesomeIcon icon={faVideo} />
                                 </div>
                             </a>
+                        </div>
 
+                        <div className="video-list-row">
                             <a href="#video-mourning" 
                                onClick={() => this.openModal(<iframe title="Mourning after video" width="560" height="315" src="https://www.youtube.com/embed/UeZyjwcHtp4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
                                 <img src={videoMourning} alt="Video for mourning after" />
@@ -155,6 +179,16 @@ class Media extends React.Component {
 
                     {/* MOBILE ORDERING */}
                         <div className="video-list-row-mobile">
+                            <a href="#video-medley" 
+                                onClick={() => this.openModal(<iframe title="Pop punk medley movie" width="560" height="315" src="https://www.youtube.com/embed/dFhlNGbqcjw?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
+                                <img src={videoMedley} alt="Video for pop punk medley" />
+                            </a>
+
+                            <a href="#video-aprilshowers" 
+                                onClick={() => this.openModal(<iframe title="April Showers movie" width="560" height="315" src="https://www.youtube.com/embed/ODoNLJBtiig?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
+                                <img src={videoAprilShowers} alt="Video for April showers" />
+                            </a>
+
                             <a href="#video-offthehook" 
                                onClick={() => this.openModal(<iframe title="Off The Hook movie" width="560" height="315" src="https://www.youtube.com/embed/LzhU8C5IyZk?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
                                 <img src={videoOffTheHook} alt="Video for off the hook field" />
