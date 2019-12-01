@@ -29,6 +29,7 @@ router.get('/', (req, res) => {
 
     else if(req.query.mode === 'admin')
         Show.find()
+            .sort({ date: -1 })
             .then(shows => {
                 res.status(200).json({success: true, payload: shows});
             })
