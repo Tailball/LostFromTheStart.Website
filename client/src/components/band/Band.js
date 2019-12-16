@@ -2,11 +2,11 @@ import React from 'react';
 
 import BandMember from './BandMember';
 
-import hilde from '../../images/hildepic.jpg';
-import seppe from '../../images/seppepic.jpg';
-import jochen from '../../images/jochenpic.jpg';
-import robby from '../../images/robbypic.jpg';
-import seb from '../../images/sebpic.jpg';
+import hilde from '../../images/hildepic.png';
+import seppe from '../../images/seppepic.png';
+import jochen from '../../images/jochenpic.png';
+import robby from '../../images/robbypic.png';
+import seb from '../../images/sebpic.png';
 
 const bandmembers = {
     Hilde: {
