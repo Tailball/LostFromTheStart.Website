@@ -109,6 +109,9 @@ class Band extends React.Component {
                     <p><i>A trip down memory lane.</i></p>
                 </div>
 
+                {/* 
+                    Disabled until further notice
+
                 <div className="featuring">
                     <h2>Featuring...</h2>
                     <ul>
@@ -127,6 +130,8 @@ class Band extends React.Component {
                 <BandMember isMobile={true} selectedMember={bandmembers.Jochen} />
                 <BandMember isMobile={true} selectedMember={bandmembers.Robby} />
                 <BandMember isMobile={true} selectedMember={bandmembers.Sebastiaan} />
+
+                */}
                 
             </section>
         );
