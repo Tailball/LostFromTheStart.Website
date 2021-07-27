@@ -4,8 +4,11 @@ import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVideo} from '@fortawesome/free-solid-svg-icons';
 
-import albumEcho from '../../images/album-echoavenue.jpg';
+//import albumEcho from '../../images/album-echoavenue.jpg';
+import playlist2021 from '../../images/playlist-2021.jpeg';
 import albumBetween from '../../images/album-fewandfarbetween.jpg';
+import videoClairvoyant from '../../images/video-clairvoyant.jpeg';
+import videoHalfhearted from '../../images/video-halfhearted.jpeg'
 import videoLeftField from '../../images/video-outofleftfield.jpg';
 import videoNostalgic from '../../images/video-nostalgicfordisaster.jpg';
 import videoCommon from '../../images/video-commonplace.jpg';
@@ -54,20 +57,29 @@ class Media extends React.Component {
 
                         <div className="music-album">
                             <div className="music-album-header">
-                                <h2>Echo Avenue</h2>
-                                <p className="release">2017 - self</p>
+                                <h2>Singles 2020 - ...</h2>
+                                <p className="release">2020 - self</p>
                             </div>
 
                             <div className="music-album-details">
-                                <img src={albumEcho} alt="Echo Avenue album cover" />
+                                <img src={playlist2021} alt="Singles playlist cover" />
                             
                                 <div className="music-album-details-tracklisting">
-                                    
-                                    <iframe src="https://open.spotify.com/embed/album/62QH1onVL0INqctURfgtej" 
-                                            title="Echo Avenue playlist on Spotify"
+
+                                    <iframe src="https://open.spotify.com/embed/playlist/6MNOnm9yufj3eLserQzhC3?theme=0"
                                             frameBorder="0" 
-                                            allowtransparency="true"
-                                            allow="encrypted-media" />
+                                            allowtransparency="true" 
+                                            allow="encrypted-media">
+                                    </iframe>
+                                    
+                                    {/*
+                                        OLD EP
+                                        <iframe src="https://open.spotify.com/embed/album/62QH1onVL0INqctURfgtej" 
+                                                title="Echo Avenue playlist on Spotify"
+                                                frameBorder="0" 
+                                                allowtransparency="true"
+                                                allow="encrypted-media" />
+                                    */}
                                 </div>
                             </div>
                         </div>
@@ -102,6 +114,26 @@ class Media extends React.Component {
 
                     {/* DESKTOP ORDERING */}
                         <div className="video-list-row">
+                            <a href="#video-clairvoyant"
+                                onClick={() => this.openModal(<iframe title="Clairvoyant movie" width="560" height="315" src="https://www.youtube.com/embed/Rk0GOYODrSQ?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
+                                <img src={videoClairvoyant} alt="Video for Clairvoyant" />
+
+                                <div className="overlay">
+                                    <p>Watch 'Clairvoyant'</p>
+                                    <FontAwesomeIcon icon={faVideo} />
+                                </div>
+                            </a>
+
+                            <a href="#video-halfhearted"
+                                onClick={() => this.openModal(<iframe title="Halfhearted movie" width="560" height="315" src="https://www.youtube.com/embed/zA84htSC9ew?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
+                                <img src={videoHalfhearted} alt="Video for Halfhearted" />
+
+                                <div className="overlay">
+                                    <p>Watch 'Halfhearted'</p>
+                                    <FontAwesomeIcon icon={faVideo} />
+                                </div>
+                            </a>
+
                             <a href="#video-medley"
                                 onClick={() => this.openModal(<iframe title="Poppunk medley movie" width="560" height="315" src="https://www.youtube.com/embed/dFhlNGbqcjw?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
                                 <img src={videoMedley} alt="Video for pop punk medley" />
@@ -111,6 +143,11 @@ class Media extends React.Component {
                                     <FontAwesomeIcon icon={faVideo} />
                                 </div>
                             </a>
+
+                        </div>
+
+
+                        <div className="video-list-row">
 
                             <a href="#video-aprilshowers"
                                onClick={() => this.openModal(<iframe title="April showers movie" width="560" height="315" src="https://www.youtube.com/embed/ODoNLJBtiig?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
@@ -130,10 +167,8 @@ class Media extends React.Component {
                                     <p>Watch 'Off The Hook'</p>
                                     <FontAwesomeIcon icon={faVideo} />
                                 </div>
-                            </a>
-                        </div>
+                            </a>                        
                         
-                        <div className="video-list-row">
                             <a href="#video-oolf" 
                                onClick={() => this.openModal(<iframe title="Out Of Left Field movie" width="560" height="315" src="https://www.youtube.com/embed/bA3STgJYs7A?rel=0&amp;showinfo=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)}>
                                 <img src={videoLeftField} alt="Video for out of left field" />
@@ -143,6 +178,11 @@ class Media extends React.Component {
                                     <FontAwesomeIcon icon={faVideo} />
                                 </div>
                             </a>
+
+                        </div>
+
+
+                        <div className="video-list-row">
 
                             <a href="#video-nostalgic" 
                                onClick={() => this.openModal(<iframe title="Nostalgic for disaster movie" width="560" height="315" src="https://www.youtube.com/embed/I0IOV27NcSA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
@@ -163,9 +203,7 @@ class Media extends React.Component {
                                     <FontAwesomeIcon icon={faVideo} />
                                 </div>
                             </a>
-                        </div>
-
-                        <div className="video-list-row">
+                            
                             <a href="#video-mourning" 
                                onClick={() => this.openModal(<iframe title="Mourning after video" width="560" height="315" src="https://www.youtube.com/embed/UeZyjwcHtp4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)}>
                                 <img src={videoMourning} alt="Video for mourning after" />
