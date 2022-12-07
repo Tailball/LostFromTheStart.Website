@@ -16,7 +16,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bcrypt": "^2.0.1",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "lodash": "^4.17.10",
     "mongoose": "^5.4.17"
   },
